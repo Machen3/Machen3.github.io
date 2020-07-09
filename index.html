@@ -64,6 +64,71 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-利用Mweb关联Hexo时遇到的问题" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/07/09/%E5%88%A9%E7%94%A8Mweb%E5%85%B3%E8%81%94Hexo%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/" class="article-date">
+  <time datetime="2020-07-09T02:39:11.841Z" itemprop="datePublished">2020-07-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/09/%E5%88%A9%E7%94%A8Mweb%E5%85%B3%E8%81%94Hexo%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/">利用Mweb关联Hexo时遇到的问题</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="利用Mweb关联Hexo时遇到的问题"><a href="#利用Mweb关联Hexo时遇到的问题" class="headerlink" title="利用Mweb关联Hexo时遇到的问题"></a>利用Mweb关联Hexo时遇到的问题</h1><p>首先在利用外部模式引入的时候，发生了权限的问题。</p>
+<table>
+<thead>
+<tr>
+<th align="center">序号</th>
+<th align="left">问题</th>
+<th align="left">解决过程</th>
+<th align="left">结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="left">无法用Mweb中的外部模式，直接读写_posts文件夹下面的文件</td>
+<td align="left">直接在“设置”中授予Mweb访问全文件夹的权限</td>
+<td align="left">失败</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="left">无法用Mweb中的外部模式，直接读写_posts文件夹下面的文件</td>
+<td align="left">在Finder中直接修改_posts的读写权限</td>
+<td align="left">成功</td>
+</tr>
+</tbody></table>
+<hr>
+<p>结论：</p>
+<ul>
+<li><strong>1:</strong>推断Mac中由于Mac App Store的Sand Box设计，导致所有的App在没有授权的情况下，是不能读取其他文件夹下面的文件的。因此，授予App权限，尝试解决问题。发现，并不是给你Mweb本身的权限不够的问题。</li>
+<li><strong>2:</strong>推断系统文件夹，在建立之初就有读写权限设定问题。因此，需要对其进行修改。**但是，由于直接通过Admin用户在Finder中进行修改，可能导致文件的安全性降低。因此该方法以后有待完善。不过，由于写博客是整理知识之用，切文件存在本地，有备份。因此安全性不是首要考虑。</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/07/09/%E5%88%A9%E7%94%A8Mweb%E5%85%B3%E8%81%94Hexo%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/" data-id="ckce7g2zq0003sjzhgx3e19lp" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Excel的功能函数(IF\CountIF\ISerror\Vlookup)" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/07/09/Excel%E7%9A%84%E5%8A%9F%E8%83%BD%E5%87%BD%E6%95%B0(IF%5CCountIF%5CISerror%5CVlookup)/" class="article-date">
@@ -116,7 +181,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/07/09/Excel%E7%9A%84%E5%8A%9F%E8%83%BD%E5%87%BD%E6%95%B0(IF/CountIF/ISerror/Vlookup)/" data-id="ckce6ij9j0003t6zh8ye071np" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/07/09/Excel%E7%9A%84%E5%8A%9F%E8%83%BD%E5%87%BD%E6%95%B0(IF/CountIF/ISerror/Vlookup)/" data-id="ckce7g2zj0001sjzh039wfjvp" class="article-share-link">Share</a>
       
       
     </footer>
@@ -291,7 +356,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/07/09/%E9%87%91%E8%9E%8D%E8%AE%A1%E9%87%8F%E5%AD%A6/" data-id="ckce6ij9e0001t6zh3027ddx0" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/07/09/%E9%87%91%E8%9E%8D%E8%AE%A1%E9%87%8F%E5%AD%A6/" data-id="ckce7g2zr0004sjzh3ndt2x8w" class="article-share-link">Share</a>
       
       
     </footer>
@@ -341,7 +406,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/07/09/Vim%E6%A8%A1%E5%BC%8F%E5%88%87%E6%8D%A2%E5%92%8C%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/" data-id="ckce6ij9h0002t6zhf5x3hvge" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/07/09/Vim%E6%A8%A1%E5%BC%8F%E5%88%87%E6%8D%A2%E5%92%8C%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/" data-id="ckce7g2zp0002sjzhd5sl8crm" class="article-share-link">Share</a>
       
       
     </footer>
@@ -380,6 +445,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2020/07/09/%E5%88%A9%E7%94%A8Mweb%E5%85%B3%E8%81%94Hexo%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/">利用Mweb关联Hexo时遇到的问题</a>
+          </li>
         
           <li>
             <a href="/2020/07/09/Excel%E7%9A%84%E5%8A%9F%E8%83%BD%E5%87%BD%E6%95%B0(IF%5CCountIF%5CISerror%5CVlookup)/">Excel的功能函数(IF\CountIF\ISerror\Vlookup)</a>
