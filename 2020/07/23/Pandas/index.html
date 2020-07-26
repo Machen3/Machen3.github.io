@@ -5,18 +5,20 @@
   
 
   
-  <title>Vim模式切换和基本命令 | Hexo</title>
+  <title>Pandas | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Vim模式通过Vim命令进入Vim后，直接就是Normal model。Normal model正常模式下无法编辑,可通过按ESC2次返回 Insert model插入模式下可以修改内容,可通过I\i\a\A等键可以启动 Command model命令模式下无法编辑内容，但可以使用其他的相关命令：  比如dd：删除单行   Normal model模式下输入(英文冒号):开启 模式。可以试用相关命">
+  <meta name="description" content="#Pandas的使用 ##Series重要特性和构成:  根据索引可自动对齐数据。  针对缺失值的方法pd.isnull()pd.notnull() 123456789101112131415In [32]: pd.isnull(obj4)Out[32]: California     TrueOhio          FalseOregon        FalseTexas">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Vim模式切换和基本命令">
-<meta property="og:url" content="http://yoursite.com/2020/07/09/Vim%E6%A8%A1%E5%BC%8F%E5%88%87%E6%8D%A2%E5%92%8C%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/index.html">
+<meta property="og:title" content="Pandas">
+<meta property="og:url" content="http://yoursite.com/2020/07/23/Pandas/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Vim模式通过Vim命令进入Vim后，直接就是Normal model。Normal model正常模式下无法编辑,可通过按ESC2次返回 Insert model插入模式下可以修改内容,可通过I\i\a\A等键可以启动 Command model命令模式下无法编辑内容，但可以使用其他的相关命令：  比如dd：删除单行   Normal model模式下输入(英文冒号):开启 模式。可以试用相关命">
+<meta property="og:description" content="#Pandas的使用 ##Series重要特性和构成:  根据索引可自动对齐数据。  针对缺失值的方法pd.isnull()pd.notnull() 123456789101112131415In [32]: pd.isnull(obj4)Out[32]: California     TrueOhio          FalseOregon        FalseTexas">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-07-08T16:48:21.606Z">
-<meta property="article:modified_time" content="2020-07-09T00:46:31.663Z">
+<meta property="article:published_time" content="2020-07-23T05:59:23.483Z">
+<meta property="article:modified_time" content="2020-07-26T04:05:36.782Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="Pandas">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -66,12 +68,16 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-Vim模式切换和基本命令" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Pandas" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/07/09/Vim%E6%A8%A1%E5%BC%8F%E5%88%87%E6%8D%A2%E5%92%8C%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/" class="article-date">
-  <time datetime="2020-07-08T16:48:21.606Z" itemprop="datePublished">2020-07-09</time>
+    <a href="/2020/07/23/Pandas/" class="article-date">
+  <time datetime="2020-07-23T05:59:23.483Z" itemprop="datePublished">2020-07-23</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -80,7 +86,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Vim模式切换和基本命令
+      Pandas
     </h1>
   
 
@@ -88,42 +94,43 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Vim模式"><a href="#Vim模式" class="headerlink" title="Vim模式"></a>Vim模式</h1><h2 id="通过Vim命令进入Vim后，直接就是Normal-model。"><a href="#通过Vim命令进入Vim后，直接就是Normal-model。" class="headerlink" title="通过Vim命令进入Vim后，直接就是Normal model。"></a>通过Vim命令进入Vim后，直接就是Normal model。</h2><p><strong>Normal model</strong><br>正常模式下无法编辑,可通过按ESC<strong>2次</strong>返回</p>
-<p><strong>Insert model</strong><br>插入模式下可以修改内容,可通过I\i\a\A等键可以启动</p>
-<p><strong>Command model</strong><br>命令模式下无法编辑内容，但可以使用其他的相关命令：</p>
-<ul>
-<li>比如dd：删除单行 </li>
-</ul>
-<p><strong>Normal model</strong><br>模式下输入(英文冒号):开启 模式。可以试用相关命令：</p>
-<ul>
-<li>退出命令q</li>
-<li>保存命令w</li>
-<li>保存并推出命令wq</li>
-<li>强制执行！</li>
-</ul>
-<p><strong>Visual model</strong><br>可视模式，在Command model下按V就可以实现。</p>
+        <p>#Pandas的使用</p>
+<p>##Series<br>重要特性和构成:</p>
+<ol>
+<li>根据索引可自动对齐数据。</li>
+</ol>
+<p>针对缺失值的方法<br>pd.isnull()<br>pd.notnull()</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">In [<span class="number">32</span>]: pd.isnull(obj4)</span><br><span class="line">Out[<span class="number">32</span>]: </span><br><span class="line">California     <span class="literal">True</span></span><br><span class="line">Ohio          <span class="literal">False</span></span><br><span class="line">Oregon        <span class="literal">False</span></span><br><span class="line">Texas         <span class="literal">False</span></span><br><span class="line">dtype: bool</span><br><span class="line"></span><br><span class="line">In [<span class="number">33</span>]: pd.notnull(obj4)</span><br><span class="line">Out[<span class="number">33</span>]: </span><br><span class="line">California    <span class="literal">False</span></span><br><span class="line">Ohio           <span class="literal">True</span></span><br><span class="line">Oregon         <span class="literal">True</span></span><br><span class="line">Texas          <span class="literal">True</span></span><br><span class="line">dtype: bool</span><br></pre></td></tr></table></figure>
+<p>DataFrame</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/07/09/Vim%E6%A8%A1%E5%BC%8F%E5%88%87%E6%8D%A2%E5%92%8C%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/" data-id="ckd323w5z000biuzhg64zby24" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/07/23/Pandas/" data-id="ckd323w5t0005iuzh436k9bgd" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Pandas/" rel="tag">Pandas</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li></ul>
+
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
-    <a href="/2020/07/09/%E9%87%91%E8%9E%8D%E8%AE%A1%E9%87%8F%E5%AD%A6/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/07/25/JSON%E5%BA%93%E4%BD%BF%E7%94%A8/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          金融计量学
+          JSON库使用
         
       </div>
     </a>
   
+  
+    <a href="/2020/07/21/%E5%BD%92%E4%B8%80%E5%8C%96%E5%92%8C%E6%A0%87%E5%87%86%E5%8C%96/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">归一化和标准化</div>
+    </a>
   
 </nav>
 
