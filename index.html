@@ -64,10 +64,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-分类和标签集合" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-markdown显示问题" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/07/26/%E5%88%86%E7%B1%BB%E5%92%8C%E6%A0%87%E7%AD%BE%E9%9B%86%E5%90%88/" class="article-date">
-  <time datetime="2020-07-26T02:55:26.861Z" itemprop="datePublished">2020-07-26</time>
+    <a href="/2020/08/22/markdown%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/" class="article-date">
+  <time datetime="2020-08-22T10:59:05.801Z" itemprop="datePublished">2020-08-22</time>
 </a>
     
   </div>
@@ -78,7 +78,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/26/%E5%88%86%E7%B1%BB%E5%92%8C%E6%A0%87%E7%AD%BE%E9%9B%86%E5%90%88/">分类和标签集合</a>
+      <a class="article-title" href="/2020/08/22/markdown%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/">markdown显示问题</a>
     </h1>
   
 
@@ -86,19 +86,330 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="分类和标签集合"><a href="#分类和标签集合" class="headerlink" title="分类和标签集合"></a>分类和标签集合</h1><blockquote>
-<p><strong>分类</strong></p>
+        <h1 id="markdown的显示问题"><a href="#markdown的显示问题" class="headerlink" title="markdown的显示问题"></a>markdown的显示问题</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">In [0]: x&#x3D;0.32342342</span><br><span class="line">        x.split(&#39;,&#39;)[0]</span><br><span class="line">Out[0]: &#39;0&#39;</span><br><span class="line"></span><br><span class="line">In [1]: t&#x3D;&#39;3.2.1.3.4&#39;</span><br><span class="line">        t.split(&#39;.&#39;,2)  </span><br><span class="line">Out[1]: [&#39;3&#39;, &#39;2&#39;, &#39;1.3.4&#39;]</span><br><span class="line"></span><br><span class="line">In [2]: str(x).split(&#39;.&#39;)   [0]+&#39;.&#39;+str(x).split(&#39;.&#39;)[1][0:2]</span><br><span class="line">        t.split(&#39;.&#39;,2)  </span><br><span class="line">Out[2]: &#39;0.32&#39;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/08/22/markdown%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/" data-id="cke5k2mha000nn5zhev0v2vp4" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Numpy的random入门" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/08/22/Numpy%E7%9A%84random%E5%85%A5%E9%97%A8/" class="article-date">
+  <time datetime="2020-08-22T08:22:59.088Z" itemprop="datePublished">2020-08-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/08/22/Numpy%E7%9A%84random%E5%85%A5%E9%97%A8/">Numpy的random入门</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="numpy中的random"><a href="#numpy中的random" class="headerlink" title="numpy中的random"></a>numpy中的random</h1><p>numpy中的random基于内置random库，但是有一定的扩充。<br>numpy.random中的函数一览</p>
+<table>
+<thead>
+<tr>
+<th>函数名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>seed</td>
+<td>随机种子，固定每次随机结果</td>
+</tr>
+<tr>
+<td>shuffle</td>
+<td>直接对原序列进行随机排列</td>
+</tr>
+<tr>
+<td>rand</td>
+<td>产生均匀分布的样本值</td>
+</tr>
+<tr>
+<td>uniform</td>
+<td>产生[0,1)中均匀分布的样本</td>
+</tr>
+<tr>
+<td>randint</td>
+<td>从上下限范围内随机选取整数</td>
+</tr>
+<tr>
+<td>randn</td>
+<td>产生均值为0，标准差为1的标准正态分布样本</td>
+</tr>
+<tr>
+<td>normal</td>
+<td>产生正态(高斯)分布，均值和标准差可以自己设置</td>
+</tr>
+<tr>
+<td>binomial</td>
+<td>产生二项分布的样本值</td>
+</tr>
+<tr>
+<td>beta</td>
+<td>产生Beta分布的样本</td>
+</tr>
+<tr>
+<td>chisquare</td>
+<td>产生卡方分布的样本</td>
+</tr>
+<tr>
+<td>gamma</td>
+<td>产生ganmma分布的样本</td>
+</tr>
+</tbody></table>
+<p>random.randn用来生成多维数据</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">In [<span class="number">0</span>]: p=np.random.randn(<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">2</span>)</span><br><span class="line">        p.shape=(<span class="number">4</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">2</span>)<span class="comment">##一共有4组，每行可看</span></span><br><span class="line">                <span class="comment">#做为一组，里面包含了3小组，其中每个小组里面还有2个小组，每组里面有2个元素 </span></span><br><span class="line">        p.ndim=<span class="number">4</span><span class="comment">#表示一共有4个维度，并不是行或者列数，</span></span><br><span class="line">                <span class="comment">#如果括号里面的是(4,3,2,2,2)的话，那么p.ndim=5。</span></span><br><span class="line">        p</span><br><span class="line">Out[<span class="number">0</span>]:</span><br><span class="line">array([[[[ <span class="number">1.91158309</span>, <span class="number">-0.87682333</span>],</span><br><span class="line">         [ <span class="number">0.60160269</span>,  <span class="number">0.06341641</span>]],</span><br><span class="line"></span><br><span class="line">        [[<span class="number">-0.09784009</span>, <span class="number">-0.05984751</span>],</span><br><span class="line">         [ <span class="number">0.31959423</span>, <span class="number">-1.79175611</span>]],</span><br><span class="line"></span><br><span class="line">        [[ <span class="number">1.17952599</span>,  <span class="number">1.55736942</span>],</span><br><span class="line">         [<span class="number">-1.43048513</span>,  <span class="number">0.54122319</span>]]],</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">       [[[ <span class="number">0.22915917</span>,  <span class="number">0.86006056</span>],</span><br><span class="line">         [ <span class="number">0.71725273</span>,  <span class="number">0.37964383</span>]],</span><br><span class="line"></span><br><span class="line">        [[<span class="number">-0.61485989</span>, <span class="number">-0.77048458</span>],</span><br><span class="line">         [ <span class="number">0.03746706</span>,  <span class="number">2.13625987</span>]],</span><br><span class="line"></span><br><span class="line">        [[ <span class="number">0.1631062</span> ,  <span class="number">1.61332833</span>],</span><br><span class="line">         [ <span class="number">0.42859682</span>,  <span class="number">0.99104735</span>]]],</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">       [[[<span class="number">-0.9961273</span> ,  <span class="number">0.59141311</span>],</span><br><span class="line">         [<span class="number">-1.51357607</span>, <span class="number">-0.20146775</span>]],</span><br><span class="line"></span><br><span class="line">        [[<span class="number">-2.08079417</span>,  <span class="number">1.22673866</span>],</span><br><span class="line">         [<span class="number">-0.93523178</span>, <span class="number">-0.94311876</span>]],</span><br><span class="line"></span><br><span class="line">        [[<span class="number">-1.13923031</span>,  <span class="number">0.37709815</span>],</span><br><span class="line">         [<span class="number">-1.16441799</span>,  <span class="number">1.24656595</span>]]],</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">       [[[ <span class="number">0.28659126</span>, <span class="number">-1.2617431</span> ],</span><br><span class="line">         [<span class="number">-0.96119151</span>,  <span class="number">0.51081749</span>]],</span><br><span class="line"></span><br><span class="line">        [[<span class="number">-0.88829652</span>, <span class="number">-1.33041141</span>],</span><br><span class="line">         [<span class="number">-0.39471656</span>, <span class="number">-1.62633929</span>]],</span><br><span class="line"></span><br><span class="line">        [[ <span class="number">0.54143349</span>,  <span class="number">0.2917141</span> ],</span><br><span class="line">         [<span class="number">-0.56696996</span>,  <span class="number">1.33974139</span>]]]])</span><br></pre></td></tr></table></figure>
+<p>生成正态分布的数据random.normal</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/08/22/Numpy%E7%9A%84random%E5%85%A5%E9%97%A8/" data-id="cke5k2mgu0002n5zhcbil1kxf" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-list的使用" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/08/21/list%E7%9A%84%E4%BD%BF%E7%94%A8/" class="article-date">
+  <time datetime="2020-08-21T11:44:53.368Z" itemprop="datePublished">2020-08-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/08/21/list%E7%9A%84%E4%BD%BF%E7%94%A8/">list的使用</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="List的基本使用"><a href="#List的基本使用" class="headerlink" title="List的基本使用"></a>List的基本使用</h1><p>保留两位小数<br>利用字符串分割符的方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&#96;&#96;&#96;python</span><br><span class="line">In [0]: x&#x3D;0.32342342</span><br><span class="line">        x.split(&#39;,&#39;)[0]</span><br><span class="line">Out[0]: &#39;0&#39;</span><br><span class="line"></span><br><span class="line">In [1]: t&#x3D;&#39;3.2.1.3.4&#39;</span><br><span class="line">        t.split(&#39;.&#39;,2)  </span><br><span class="line">Out[1]: [&#39;3&#39;, &#39;2&#39;, &#39;1.3.4&#39;]</span><br><span class="line"></span><br><span class="line">In [2]: str(x).split(&#39;.&#39;)   [0]+&#39;.&#39;+str(x).split(&#39;.&#39;)[1][0:2]</span><br><span class="line">        t.split(&#39;.&#39;,2)  </span><br><span class="line">Out[2]: &#39;0.32&#39;</span><br></pre></td></tr></table></figure>
+
+<p>list的排序</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&#96;&#96;&#96;python</span><br><span class="line">In [2]: T&#x3D;[&#39;1&#39;,&#39;2&#39;,&#39;3&#39;]</span><br><span class="line">        T.sort(reverse&#x3D;True)</span><br><span class="line">        T</span><br><span class="line">Out[2]: [&#39;3&#39;, &#39;2&#39;, &#39;1&#39;]</span><br><span class="line"></span><br><span class="line">In [3]: T&#x3D;np.random.randint(1,10,10).tolist()</span><br><span class="line">        T</span><br><span class="line">        T[::1]</span><br><span class="line">        T[::-1]</span><br><span class="line">        T[::2]</span><br><span class="line">Out[3]: [5, 9, 2, 4, 8, 4, 6, 4, 8, 2]</span><br><span class="line">        [5, 9, 2, 4, 8, 4, 6, 4, 8, 2]</span><br><span class="line">        [2, 8, 4, 6, 4, 8, 4, 2, 9, 5]</span><br><span class="line">        [5, 2, 8, 6, 8]</span><br></pre></td></tr></table></figure>
+
+<p>list的随机选择<br>利用random库</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&#96;&#96;&#96;python</span><br><span class="line">import random</span><br><span class="line">In [3]: random.sample(T,2)</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/08/21/list%E7%9A%84%E4%BD%BF%E7%94%A8/" data-id="cke5k2mh8000gn5zh35gp9nih" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Pandas和遍历" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/08/12/Pandas%E5%92%8C%E9%81%8D%E5%8E%86/" class="article-date">
+  <time datetime="2020-08-12T06:20:27.975Z" itemprop="datePublished">2020-08-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/08/12/Pandas%E5%92%8C%E9%81%8D%E5%8E%86/">Pandas和遍历</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Pandas中的循环和遍历"><a href="#Pandas中的循环和遍历" class="headerlink" title="Pandas中的循环和遍历"></a>Pandas中的循环和遍历</h1><p>对一张table进行遍历，什么时候会用到呢？<br>将两列进行比较，选出符合条件的值并且赋值生成新列或者是完成其他运算操作<br>Pandas的遍历有4中办法，其中两种主要进行数值计算，另外两种可以定义函数进行操作。</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>主要用处</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>iterrows()</td>
+<td>返回索引和行本身</td>
+</tr>
+<tr>
+<td>apply()</td>
+<td>Series级别的映射，一般搭配lambda使用</td>
+</tr>
+<tr>
+<td>series矢量化</td>
+<td>比如，df[‘column_name3’]=df[‘column_name1’]+[‘column_name2’]</td>
+</tr>
+<tr>
+<td>arrays矢量化</td>
+<td>df[‘column_name3’]=df[‘column_name1’].values+[‘column_name2’].values</td>
+</tr>
+</tbody></table>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> index,row <span class="keyword">in</span> T.iterrows():</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line">In [<span class="number">1</span>]:T=pd.DataFrame(&#123;</span><br><span class="line">         <span class="string">'性别'</span>:[<span class="string">'女'</span>,<span class="string">"女"</span>,<span class="string">"男"</span>,<span class="string">"女"</span>,<span class="string">"男"</span>],</span><br><span class="line">         <span class="string">"年龄"</span>:[np.nan,np.nan,<span class="number">28</span>,<span class="number">32</span>,<span class="number">39</span>],</span><br><span class="line">         <span class="string">"血型"</span>:[np.nan,<span class="string">"C"</span>,<span class="string">"B"</span>,np.nan,<span class="string">"A"</span>]</span><br><span class="line">         &#125;)</span><br><span class="line">         T</span><br><span class="line">Out[<span class="number">1</span>]:   性别  年龄  血型</span><br><span class="line">        <span class="number">0</span>  女   NaN  NaN</span><br><span class="line">        <span class="number">1</span>  女   NaN    C</span><br><span class="line">        <span class="number">2</span>  男  <span class="number">28.0</span>    B</span><br><span class="line">        <span class="number">3</span>  女  <span class="number">32.0</span>  NaN</span><br><span class="line">        <span class="number">4</span>  男  <span class="number">39.0</span>    A</span><br><span class="line">In [<span class="number">1</span>]:</span><br><span class="line">    <span class="keyword">for</span> index,row <span class="keyword">in</span> pd.DataFrame.iterrows:</span><br><span class="line">        <span class="keyword">if</span> row[<span class="string">'column_name1'</span>]==<span class="number">0</span>:</span><br><span class="line">            row[<span class="string">'column_name2'</span>]=</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">In [<span class="number">2</span>]:</span><br><span class="line"><span class="keyword">for</span> index,row <span class="keyword">in</span> T.iterrows():</span><br><span class="line">    print(index)</span><br><span class="line">    print(<span class="string">"*"</span>*<span class="number">50</span>)</span><br><span class="line">    print(row)</span><br><span class="line">    print(<span class="string">"*"</span>*<span class="number">50</span>) </span><br><span class="line">Out[<span class="number">2</span>]:</span><br><span class="line"><span class="number">0</span></span><br><span class="line">**************************************************</span><br><span class="line">性别      女</span><br><span class="line">年龄    NaN</span><br><span class="line">血型    NaN</span><br><span class="line">Name: <span class="number">0</span>, dtype: object</span><br><span class="line">**************************************************</span><br><span class="line"><span class="number">1</span></span><br><span class="line">**************************************************</span><br><span class="line">性别      女</span><br><span class="line">年龄    NaN</span><br><span class="line">血型      C</span><br><span class="line">Name: <span class="number">1</span>, dtype: object</span><br><span class="line">**************************************************</span><br><span class="line"><span class="number">2</span></span><br><span class="line">**************************************************</span><br><span class="line">性别     男</span><br><span class="line">年龄    <span class="number">28</span></span><br><span class="line">血型     B</span><br><span class="line">Name: <span class="number">2</span>, dtype: object</span><br><span class="line">**************************************************</span><br><span class="line"><span class="number">3</span></span><br><span class="line">**************************************************</span><br><span class="line">性别      女</span><br><span class="line">年龄     <span class="number">32</span></span><br><span class="line">血型    NaN</span><br><span class="line">Name: <span class="number">3</span>, dtype: object</span><br><span class="line">**************************************************</span><br><span class="line"><span class="number">4</span></span><br><span class="line">**************************************************</span><br><span class="line">性别     男</span><br><span class="line">年龄    <span class="number">39</span></span><br><span class="line">血型     A</span><br><span class="line">Name: <span class="number">4</span>, dtype: object</span><br><span class="line">**************************************************</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/08/12/Pandas%E5%92%8C%E9%81%8D%E5%8E%86/" data-id="cke5k2mgz0007n5zh77ja3s77" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-SQL学习" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/08/12/SQL%E5%AD%A6%E4%B9%A0/" class="article-date">
+  <time datetime="2020-08-12T05:42:40.179Z" itemprop="datePublished">2020-08-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/08/12/SQL%E5%AD%A6%E4%B9%A0/">SQL学习</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="SQL学习"><a href="#SQL学习" class="headerlink" title="SQL学习"></a>SQL学习</h1><hr>
+<blockquote>
+<p>查询select</p>
 </blockquote>
-<ol>
-<li>计算机</li>
-<li>金融</li>
-<li>历史</li>
-</ol>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Select</span> <span class="keyword">distinct</span> column_name,clumn_name</span><br><span class="line"><span class="keyword">from</span> table_name</span><br></pre></td></tr></table></figure>
+<h2 id="从列中选出唯一不同的值，类比pandas中的drop-duplicates"><a href="#从列中选出唯一不同的值，类比pandas中的drop-duplicates" class="headerlink" title="从列中选出唯一不同的值，类比pandas中的drop_duplicates"></a>从列中选出唯一不同的值，类比pandas中的<code>drop_duplicates</code></h2><blockquote>
+<p>过滤where</p>
+</blockquote>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Select</span> <span class="keyword">distinct</span> column_name,clumn_name</span><br><span class="line"><span class="keyword">from</span> table_name</span><br><span class="line"><span class="keyword">where</span> column_name=<span class="string">"cn"</span> <span class="keyword">and</span> column_name=<span class="number">086</span></span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>=</td>
+<td>等于</td>
+</tr>
+<tr>
+<td>&lt;&gt;或者!=</td>
+<td>不等于</td>
+</tr>
+<tr>
+<td>&lt; 和 &gt;</td>
+<td>小于 和 等于</td>
+</tr>
+<tr>
+<td>&gt;= 和 &lt;=</td>
+<td>大于等于 和 小于等于</td>
+</tr>
+<tr>
+<td>BETWEEN</td>
+<td>在某个范围</td>
+</tr>
+<tr>
+<td>like</td>
+<td>搜索某种模式，比如”<em>信息披露</em>”</td>
+</tr>
+<tr>
+<td>in</td>
+<td>指定某个列中的多个可能值</td>
+</tr>
+</tbody></table>
+<hr>
+<blockquote>
+<p>合并查询结果Union和Union All</p>
+</blockquote>
+<figure class="highlight plain"><figcaption><span>all```。但是使用条件是字段名称要一致。</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#96;&#96;&#96;sql</span><br><span class="line">select * from table1</span><br><span class="line">union</span><br><span class="line">select * from table2</span><br></pre></td></tr></table></figure>
+<hr>
+<blockquote>
+<p>链接Join,类比Pandas中的Merge</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>INNER JOIN</td>
+<td>A inner join B,求A和B的交集</td>
+</tr>
+<tr>
+<td>FULL JOIN</td>
+<td>A full join B,求A和B的并集</td>
+</tr>
+<tr>
+<td>LEFT JOIN</td>
+<td>A left join B,满足A的集合</td>
+</tr>
+<tr>
+<td>RIGHT JOIN</td>
+<td>A right join B,满足B的集合</td>
+</tr>
+</tbody></table>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span>（<span class="keyword">select</span> * <span class="keyword">from</span> table1</span><br><span class="line"><span class="keyword">union</span></span><br><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> table2）<span class="keyword">as</span> a</span><br><span class="line"><span class="keyword">inner</span> <span class="keyword">join</span> table3 b</span><br><span class="line"><span class="keyword">on</span> a.id=b.id</span><br></pre></td></tr></table></figure>
+
+<hr>
+<blockquote>
+<p>排序order by</p>
+</blockquote>
+<p>根据字段在多张表之间匹配<br>链接join<br>inner join</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/07/26/%E5%88%86%E7%B1%BB%E5%92%8C%E6%A0%87%E7%AD%BE%E9%9B%86%E5%90%88/" data-id="ckd323w5y000aiuzhh7cq60a9" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/08/12/SQL%E5%AD%A6%E4%B9%A0/" data-id="cke5k2mh10009n5zhgqu8a8ie" class="article-share-link">Share</a>
       
       
     </footer>
@@ -108,10 +419,10 @@
 
 
   
-    <article id="post-Requests库" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-指数研究" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/07/25/Requests%E5%BA%93/" class="article-date">
-  <time datetime="2020-07-25T08:54:24.762Z" itemprop="datePublished">2020-07-25</time>
+    <a href="/2020/08/07/%E6%8C%87%E6%95%B0%E7%A0%94%E7%A9%B6/" class="article-date">
+  <time datetime="2020-08-07T05:39:20.964Z" itemprop="datePublished">2020-08-07</time>
 </a>
     
   </div>
@@ -122,7 +433,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/25/Requests%E5%BA%93/">Requests库</a>
+      <a class="article-title" href="/2020/08/07/%E6%8C%87%E6%95%B0%E7%A0%94%E7%A9%B6/">指数研究</a>
     </h1>
   
 
@@ -130,14 +441,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Requests的使用"><a href="#Requests的使用" class="headerlink" title="Requests的使用"></a>Requests的使用</h1><p>Get和Post方法对同一个网页的区别.虽然都能用来获取源码，但是post可以用来提交数据给服务器。</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">In[<span class="number">1</span>]:</span><br><span class="line"><span class="comment">#案例网站https://pythonscraping.com/pages/files/form.html</span></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line">url=<span class="string">"https://pythonscraping.com/pages/files/form.html"</span></span><br><span class="line">params=&#123;<span class="string">'firstname'</span>:<span class="string">'Elric'</span>,<span class="string">'lastname'</span>:<span class="string">'Ma'</span>&#125;</span><br><span class="line">r=requests.post(url,params)</span><br><span class="line">print(r.text)</span><br><span class="line"></span><br><span class="line">Out[<span class="number">1</span>]:</span><br><span class="line">&lt;h2&gt;Tell me your name!&lt;/h2&gt;</span><br><span class="line">&lt;form method=<span class="string">"post"</span> action=<span class="string">"processing.php"</span>&gt;</span><br><span class="line">First name: &lt;input type=<span class="string">"text"</span> name=<span class="string">"firstname"</span>&gt;&lt;br&gt;</span><br><span class="line">Last name: &lt;input type=<span class="string">"text"</span> name=<span class="string">"lastname"</span>&gt;&lt;br&gt;</span><br><span class="line">&lt;input type=<span class="string">"submit"</span> value=<span class="string">"Submit"</span> id=<span class="string">"submit"</span>&gt;</span><br><span class="line">&lt;/form&gt;</span><br><span class="line"></span><br><span class="line">In[<span class="number">2</span>]:</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line">url=<span class="string">"https://pythonscraping.com/pages/files/form.html"</span></span><br><span class="line">params=&#123;<span class="string">'firstname'</span>:<span class="string">'Elric'</span>,<span class="string">'lastname'</span>:<span class="string">'Ma'</span>&#125;</span><br><span class="line">r=requests.get(url,params)</span><br><span class="line">print(r.text)</span><br><span class="line"></span><br><span class="line">Out[<span class="number">2</span>]:</span><br><span class="line">&lt;h2&gt;Tell me your name!&lt;/h2&gt;</span><br><span class="line">&lt;form method=<span class="string">"post"</span> action=<span class="string">"processing.php"</span>&gt;</span><br><span class="line">First name: &lt;input type=<span class="string">"text"</span> name=<span class="string">"firstname"</span>&gt;&lt;br&gt;</span><br><span class="line">Last name: &lt;input type=<span class="string">"text"</span> name=<span class="string">"lastname"</span>&gt;&lt;br&gt;</span><br><span class="line">&lt;input type=<span class="string">"submit"</span> value=<span class="string">"Submit"</span> id=<span class="string">"submit"</span>&gt;</span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure>
-<p>通过观察源码，我们能发现，该表格使用post方法，那么其真实发生post行为的绝对路径其实是（<a href="http://pythonscraping.com/files/processing/php）" target="_blank" rel="noopener">http://pythonscraping.com/files/processing/php）</a></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">In[<span class="number">3</span>]:</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line">url=<span class="string">"https://pythonscraping.com/pages/files/processing.php"</span></span><br><span class="line">params=&#123;<span class="string">'firstname'</span>:<span class="string">'Elric'</span>,<span class="string">'lastname'</span>:<span class="string">'Ma'</span>&#125;</span><br><span class="line">r=requests.get(url,params)</span><br><span class="line">print(r.text)</span><br><span class="line"></span><br><span class="line">Out[<span class="number">3</span>]:</span><br><span class="line">Hello there,  !</span><br><span class="line"></span><br><span class="line">In[<span class="number">4</span>]:</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line">url=<span class="string">"https://pythonscraping.com/pages/files/processing.php"</span></span><br><span class="line">params=&#123;<span class="string">'firstname'</span>:<span class="string">'Elric'</span>,<span class="string">'lastname'</span>:<span class="string">'Ma'</span>&#125;</span><br><span class="line">r=requests.post(url,params)</span><br><span class="line">print(r.text)</span><br><span class="line"></span><br><span class="line">Out[<span class="number">4</span>]:</span><br><span class="line">Hello there, Elric Ma!</span><br></pre></td></tr></table></figure>
+        <h1 id="指数的含义"><a href="#指数的含义" class="headerlink" title="指数的含义"></a>指数的含义</h1><p>反映宏观变化</p>
+<p>##义乌指数<br>义乌指数的的构成和分类<br>场内直接交易价格和场内订单价格的却别是，一个是现货，另外一个是订单即延后交货。</p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/07/25/Requests%E5%BA%93/" data-id="ckd323w5r0003iuzh88vb048i" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/08/07/%E6%8C%87%E6%95%B0%E7%A0%94%E7%A9%B6/" data-id="cke5k2mhd000sn5zh01wb1d9t" class="article-share-link">Share</a>
       
       
     </footer>
@@ -147,10 +457,10 @@
 
 
   
-    <article id="post-JSON库使用" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-爬虫知识储备" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/07/25/JSON%E5%BA%93%E4%BD%BF%E7%94%A8/" class="article-date">
-  <time datetime="2020-07-25T08:08:10.872Z" itemprop="datePublished">2020-07-25</time>
+    <a href="/2020/08/05/%E7%88%AC%E8%99%AB%E7%9F%A5%E8%AF%86%E5%82%A8%E5%A4%87/" class="article-date">
+  <time datetime="2020-08-05T05:11:56.286Z" itemprop="datePublished">2020-08-05</time>
 </a>
     
   </div>
@@ -161,7 +471,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/25/JSON%E5%BA%93%E4%BD%BF%E7%94%A8/">JSON库使用</a>
+      <a class="article-title" href="/2020/08/05/%E7%88%AC%E8%99%AB%E7%9F%A5%E8%AF%86%E5%82%A8%E5%A4%87/">爬虫知识储备</a>
     </h1>
   
 
@@ -169,108 +479,65 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">In[<span class="number">1</span>]:</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line">jsonS= <span class="string">'&#123;"arrayofnums":[&#123;"number":0&#125;,&#123;"number":1&#125;,&#123;"number":2&#125;] \</span></span><br><span class="line"><span class="string">,"arrayoffrutits":[&#123;"fruit":"apple"&#125;,&#123;"fruit":"banana"&#125;,&#123;"fruit":"pear"&#125;]&#125;'</span></span><br><span class="line"><span class="comment">#\用来将长代码分为几个短代码，方便阅读</span></span><br><span class="line">print(jsonS)</span><br><span class="line">type(jsonS)</span><br><span class="line"></span><br><span class="line">Out[<span class="number">1</span>]:</span><br><span class="line">&#123;<span class="string">"arrayofnums"</span>:[&#123;<span class="string">"number"</span>:<span class="number">0</span>&#125;,&#123;<span class="string">"number"</span>:<span class="number">1</span>&#125;,&#123;<span class="string">"number"</span>:<span class="number">2</span>&#125;] ,<span class="string">"arrayoffrutits"</span>:[&#123;<span class="string">"fruit"</span>:<span class="string">"apple"</span>&#125;,&#123;<span class="string">"fruit"</span>:<span class="string">"banana"</span>&#125;,&#123;<span class="string">"fruit"</span>:<span class="string">"pear"</span>&#125;]&#125;</span><br><span class="line">str</span><br><span class="line"></span><br><span class="line">In[<span class="number">2</span>]:</span><br><span class="line">jsonObject=json.loads(jsonS)</span><br><span class="line"><span class="comment">#必须是json对象才能调用，json库中的函数</span></span><br><span class="line">jsonObject=json.loads(jsonS)</span><br><span class="line"></span><br><span class="line">print(jsonObject)</span><br><span class="line">print(type(jsonS),type(jsonObject))</span><br><span class="line"></span><br><span class="line">Out[<span class="number">2</span>]:</span><br><span class="line">&#123;<span class="string">'arrayofnums'</span>: [&#123;<span class="string">'number'</span>: <span class="number">0</span>&#125;, &#123;<span class="string">'number'</span>: <span class="number">1</span>&#125;, &#123;<span class="string">'number'</span>: <span class="number">2</span>&#125;], <span class="string">'arrayoffrutits'</span>: [&#123;<span class="string">'fruit'</span>: <span class="string">'apple'</span>&#125;, &#123;<span class="string">'fruit'</span>: <span class="string">'banana'</span>&#125;, &#123;<span class="string">'fruit'</span>: <span class="string">'pear'</span>&#125;]&#125;</span><br><span class="line">&lt;<span class="class"><span class="keyword">class</span> '<span class="title">str</span>'&gt; &lt;<span class="title">class</span> '<span class="title">dict</span>'&gt;</span></span><br></pre></td></tr></table></figure>
-<p>要想使用Json库，必须先用<strong>load函数</strong>转为Json对象。<br>简单的调用方法有<strong>get方法</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">In[<span class="number">3</span>]:</span><br><span class="line">print(jsonObject.get(<span class="string">"arrayofnums"</span>))</span><br><span class="line">print(jsonObject.get(<span class="string">"arrayofnums"</span>)[<span class="number">1</span>])</span><br><span class="line">print(jsonObject.get(<span class="string">"arrayofnums"</span>)[<span class="number">1</span>].get(<span class="string">'number'</span>) </span><br><span class="line">      +</span><br><span class="line">      jsonObject.get(<span class="string">"arrayofnums"</span>)[<span class="number">2</span>].get(<span class="string">'number'</span>))</span><br><span class="line">      </span><br><span class="line">Out[<span class="number">3</span>]:</span><br><span class="line">[&#123;<span class="string">'number'</span>: <span class="number">0</span>&#125;, &#123;<span class="string">'number'</span>: <span class="number">1</span>&#125;, &#123;<span class="string">'number'</span>: <span class="number">2</span>&#125;]</span><br><span class="line">&#123;<span class="string">'number'</span>: <span class="number">1</span>&#125;</span><br><span class="line"><span class="number">3</span></span><br></pre></td></tr></table></figure>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/07/25/JSON%E5%BA%93%E4%BD%BF%E7%94%A8/" data-id="ckd323w5s0004iuzhetkidpyd" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Pandas" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/07/23/Pandas/" class="article-date">
-  <time datetime="2020-07-23T05:59:23.483Z" itemprop="datePublished">2020-07-23</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/23/Pandas/">Pandas</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>#Pandas的使用</p>
-<p>##Series<br>重要特性和构成:</p>
-<ol>
-<li>根据索引可自动对齐数据。</li>
-</ol>
-<p>针对缺失值的方法<br>pd.isnull()<br>pd.notnull()</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">In [<span class="number">32</span>]: pd.isnull(obj4)</span><br><span class="line">Out[<span class="number">32</span>]: </span><br><span class="line">California     <span class="literal">True</span></span><br><span class="line">Ohio          <span class="literal">False</span></span><br><span class="line">Oregon        <span class="literal">False</span></span><br><span class="line">Texas         <span class="literal">False</span></span><br><span class="line">dtype: bool</span><br><span class="line"></span><br><span class="line">In [<span class="number">33</span>]: pd.notnull(obj4)</span><br><span class="line">Out[<span class="number">33</span>]: </span><br><span class="line">California    <span class="literal">False</span></span><br><span class="line">Ohio           <span class="literal">True</span></span><br><span class="line">Oregon         <span class="literal">True</span></span><br><span class="line">Texas          <span class="literal">True</span></span><br><span class="line">dtype: bool</span><br></pre></td></tr></table></figure>
-<p>DataFrame</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/07/23/Pandas/" data-id="ckd323w5t0005iuzh436k9bgd" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Pandas/" rel="tag">Pandas</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-归一化和标准化" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/07/21/%E5%BD%92%E4%B8%80%E5%8C%96%E5%92%8C%E6%A0%87%E5%87%86%E5%8C%96/" class="article-date">
-  <time datetime="2020-07-21T12:36:23.938Z" itemprop="datePublished">2020-07-21</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/21/%E5%BD%92%E4%B8%80%E5%8C%96%E5%92%8C%E6%A0%87%E5%87%86%E5%8C%96/">归一化和标准化</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="归一化和标准化"><a href="#归一化和标准化" class="headerlink" title="归一化和标准化"></a>归一化和标准化</h1><p>在英文的表达中归一化和标准化同属于Feature Scaling（特征缩放）的方法。</p>
+        <h1 id="爬虫的知识储备"><a href="#爬虫的知识储备" class="headerlink" title="爬虫的知识储备"></a>爬虫的知识储备</h1><p>HTML和XPath以及CSS selector</p>
+<hr>
+<p>HTML又叫HyperText Markup Language，常和CSS以及JaveScript一起被用于设计网站。作为一种结构和标记语言使用。<br>在python中常用bs4对网页进行解析，支持HTML和CSS。</p>
 <ul>
-<li>Normalization<ul>
-<li>Max-Min Normalization<br>=$\frac{X-Min(x)}{Max(x)-Min(x)}$</li>
-<li>Mean Normalization<br>=$\frac{X-Mean(x)}{Max(x)-Min(x)}$</li>
+<li>第一層是 <code>&lt;html&gt;...&lt;/html&gt;</code></li>
+<li>第二層是 <code>&lt;head&gt;...&lt;/head&gt;</code>與 <code>&lt;body&gt;...&lt;/body&gt;</code></li>
+<li>第三層是 <code>&lt;title&gt;...&lt;/title&gt;</code> 、<code>&lt;h1&gt;...&lt;/h1&gt;</code> 與三組 <code>&lt;p&gt;...&lt;/p&gt;</code></li>
+</ul>
+<p><img src="/images/15966045834891.jpg" alt="-w549"></p>
+<p>用法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">url=<span class="string">"xxxxx"</span></span><br><span class="line">r=request.get(url,timeout=<span class="number">30</span>)</span><br><span class="line">r.raise_for_status()</span><br><span class="line">r.encoding=r.apparent_encoding</span><br><span class="line">html_str=r.text</span><br><span class="line">soup = BeautifulSoup(html_str)</span><br><span class="line">print(soup.find(<span class="string">"h1"</span>).text)</span><br><span class="line"><span class="keyword">for</span> movie_title <span class="keyword">in</span> soup.find_all(<span class="string">"p"</span>):</span><br><span class="line">    print(movie_title.text)</span><br></pre></td></tr></table></figure>
+
+<p>除了文字信息外，我们还可能要求获取标记中的属性</p>
+<ul>
+<li>id 用來標註不同的<code>&lt;div&gt;...&lt;/div&gt;</code> 、<code>&lt;li&gt;...&lt;/li&gt;</code></li>
+<li>class 用來標註三組<code>&lt;li&gt;...&lt;/li&gt;</code></li>
+<li>href 是 <code>&lt;a&gt;...&lt;/a&gt;</code>的連結網址屬性<br><img src="/images/15966049122990.jpg" alt="-w635"><br>用法<code>(soup.find(id=&quot;movie-3&quot;).find(&quot;a&quot;).get(&quot;href&quot;))</code></li>
+</ul>
+<hr>
+<p>XPath又叫XML Path Language与CSS一起常用来定位HTML档案中元素。<br>在python中bs4并不支持XPath语言，但是其他常用解析库比如lxml、Selenium和Scrapy等都支持该语言。</p>
+<p>XPath的基本组成</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/html/body/p[<span class="number">4</span>]/text()<span class="comment">#[]用来指定内容</span></span><br><span class="line">//p[<span class="number">4</span>]/text()<span class="comment">#text()用来获取文本内容</span></span><br></pre></td></tr></table></figure>
+
+<p>XPath的4种常见定位方法</p>
+<ul>
+<li>根节点与非根节点<ul>
+<li><code>/div</code>选择div节点（当div为根节点的时候），理解为在树状结构中向下移动一层。</li>
+<li><code>//div</code>选择所有的div节点，包括非根节点，理解为在树状结构中的所以层寻找指定标记。</li>
 </ul>
 </li>
-<li>Standardization(Z-Score normalization)<pre><code>=$\frac{X-Mean(x)}{σ}$  </code></pre></li>
+<li>通过属性选择节点<ul>
+<li><code>@</code>用来指定属性，比如<code>id</code> \ <code>class</code>\ <code>href</code>等。</li>
+<li><code>//@href</code></li>
+<li><code>//a[@href = &#39;http://google.com&#39;]</code></li>
 </ul>
+</li>
+<li>通过位置选择<ul>
+<li><code>//[3]</code>选择第三个</li>
+<li><code>//table[last()]</code>选择最后一个表</li>
+<li><code>a[position()&lt;3]</code>选择前三个</li>
+</ul>
+</li>
+<li>配合<code>*</code>匹配任意字符和节点<ul>
+<li><code>//table/tr/*</code></li>
+<li><code>//div[@*]</code></li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>CSS Selector，Cascading Style Sheets Selector，又叫层叠表，常用来改变HTML的呈现外观。<br>改变字体颜色。<br><img src="/images/15966301632705.jpg" alt="-w565"><br>或改变字体大小。<img src="/images/15966302006864.jpg" alt="-w628"></p>
+<p>CSS的基本用法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#96;&#96;&#96;空格&#96;&#96;&#96;类似XPath中的&#96;&#96;&#96;&#x2F;&#x2F;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#96;&#96;&#96;.&#96;&#96;&#96;类似XPath中的&#96;&#96;&#96;@&#96;&#96;&#96;来指定class属性</span><br><span class="line">&#96;&#96;&#96;#&#96;&#96;&#96;类似XPath中的&#96;&#96;&#96;@&#96;&#96;&#96;来指定id属性</span><br><span class="line">&#96;&#96;&#96;::text&#96;&#96;&#96;类似XPath中的&#96;&#96;&#96;text()&#96;&#96;&#96;用来获取内容</span><br><span class="line"></span><br><span class="line">用法：</span><br><span class="line">&#96;&#96;&#96;python</span><br><span class="line">soup &#x3D; BeautifulSoup(html_str)</span><br><span class="line">print(soup.select(&#39;html &gt; body &gt; p:nth-of-type(4)&#39;)[0].text)</span><br><span class="line">print(soup.select(&#39;p:nth-of-type(4)&#39;)[0].text)</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/07/21/%E5%BD%92%E4%B8%80%E5%8C%96%E5%92%8C%E6%A0%87%E5%87%86%E5%8C%96/" data-id="ckd323w64000kiuzhahgx1bl1" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/08/05/%E7%88%AC%E8%99%AB%E7%9F%A5%E8%AF%86%E5%82%A8%E5%A4%87/" data-id="cke5k2mhe000un5zhbspkbl4w" class="article-share-link">Share</a>
       
       
     </footer>
@@ -280,10 +547,10 @@
 
 
   
-    <article id="post-数据预处理问题" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-如何将Anaconda配置到全局变量中" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/07/16/%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86%E9%97%AE%E9%A2%98/" class="article-date">
-  <time datetime="2020-07-16T06:55:47.642Z" itemprop="datePublished">2020-07-16</time>
+    <a href="/2020/08/04/%E5%A6%82%E4%BD%95%E5%B0%86Anaconda%E9%85%8D%E7%BD%AE%E5%88%B0%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F%E4%B8%AD/" class="article-date">
+  <time datetime="2020-08-04T07:34:00.919Z" itemprop="datePublished">2020-08-04</time>
 </a>
     
   </div>
@@ -294,7 +561,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/16/%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86%E9%97%AE%E9%A2%98/">数据预处理问题</a>
+      <a class="article-title" href="/2020/08/04/%E5%A6%82%E4%BD%95%E5%B0%86Anaconda%E9%85%8D%E7%BD%AE%E5%88%B0%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F%E4%B8%AD/">如何将Anaconda配置到全局变量中</a>
     </h1>
   
 
@@ -302,19 +569,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="数据预处理"><a href="#数据预处理" class="headerlink" title="数据预处理"></a>数据预处理</h1><blockquote>
-<p>为什么数据要预处理？</p>
-</blockquote>
-<p>为了达到让数据更容易被处理、计算、理解。<br>可以避免常见的一些问题：</p>
-<ol>
-<li>机器学习求解最优化的速度。</li>
-<li>量纲问题</li>
-</ol>
+        <h1 id="如何将Anaconda配置到全局中（Mac）"><a href="#如何将Anaconda配置到全局中（Mac）" class="headerlink" title="如何将Anaconda配置到全局中（Mac）"></a>如何将Anaconda配置到全局中（Mac）</h1><p>首先安装ZSH版本的shells</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">vim ~&#x2F;.bash_profile # 我用的shell是zsh ，所以我输入 vim ~&#x2F;.zshrc</span><br><span class="line"></span><br><span class="line">export PATH&#x3D;&quot;~&#x2F;anaconda3&#x2F;bin:$PATH&quot;</span><br><span class="line"></span><br><span class="line">source ~&#x2F;.zshrc</span><br></pre></td></tr></table></figure>
+<p>注意文件路径改成你自己anaconda3下面bin的路径就好了。</p>
+<p>source激活后，就可以直接在终端中使用pip和其他命令行功能了，比如spyder直接打开spyder软件等。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/07/16/%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86%E9%97%AE%E9%A2%98/" data-id="ckd323w61000eiuzhc7gv6m8l" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/08/04/%E5%A6%82%E4%BD%95%E5%B0%86Anaconda%E9%85%8D%E7%BD%AE%E5%88%B0%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F%E4%B8%AD/" data-id="cke5k2mhd000tn5zhb4bb81v3" class="article-share-link">Share</a>
       
       
     </footer>
@@ -324,10 +587,10 @@
 
 
   
-    <article id="post-知识图谱的黑箱逻辑推测-平安科技-" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Pandas与Excel的使用比较与总结" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/07/14/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%9A%84%E9%BB%91%E7%AE%B1%E9%80%BB%E8%BE%91%E6%8E%A8%E6%B5%8B-%E5%B9%B3%E5%AE%89%E7%A7%91%E6%8A%80-/" class="article-date">
-  <time datetime="2020-07-14T09:23:21.193Z" itemprop="datePublished">2020-07-14</time>
+    <a href="/2020/08/01/Pandas%E4%B8%8EExcel%E7%9A%84%E4%BD%BF%E7%94%A8%E6%AF%94%E8%BE%83%E4%B8%8E%E6%80%BB%E7%BB%93/" class="article-date">
+  <time datetime="2020-08-01T03:29:00.513Z" itemprop="datePublished">2020-08-01</time>
 </a>
     
   </div>
@@ -338,7 +601,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/14/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%9A%84%E9%BB%91%E7%AE%B1%E9%80%BB%E8%BE%91%E6%8E%A8%E6%B5%8B-%E5%B9%B3%E5%AE%89%E7%A7%91%E6%8A%80-/">知识图谱的黑箱逻辑推测-平安科技-</a>
+      <a class="article-title" href="/2020/08/01/Pandas%E4%B8%8EExcel%E7%9A%84%E4%BD%BF%E7%94%A8%E6%AF%94%E8%BE%83%E4%B8%8E%E6%80%BB%E7%BB%93/">Pandas与Excel的使用比较与总结</a>
     </h1>
   
 
@@ -346,11 +609,72 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="Pandas与Excel的类比"><a href="#Pandas与Excel的类比" class="headerlink" title="Pandas与Excel的类比"></a>Pandas与Excel的类比</h1><h4 id="结论："><a href="#结论：" class="headerlink" title="结论："></a>结论：</h4><p>1.两者都是数据处理工具,Pandas在大量数据运算时候非常有优势,单纯对比下Excel可视化程度更高。<br>2.如果是一次性操作，Excel实现起来更快,因为很多操作都黑箱化了.不过对Pandas利用熟练或者有封装好的函数也可以实现<br>3.最重要的是Pandas可以程序化重复使用，虽然Excel也可以。<br>4.Pandas的可视化和数据展示得结合其他库的使用，这个后续有待开发</p>
+<hr>
+<p>清洗异常值:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">替换数据:</span><br><span class="line">&#96;&#96;&#96;pd.df.replace</span><br></pre></td></tr></table></figure>
+<p>筛选数据:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">| 运算符   | 描述          | 实例           |</span><br><span class="line">|-------|-------------|--------------|</span><br><span class="line">| &#x3D;&#x3D;    | 等于，判断是否相等   | 返回True或False |</span><br><span class="line">| !&#x3D;    | 不等于，判断是否不相等 | 返回True或False |</span><br><span class="line">| &gt;和&lt;   | 大于和小于       | 返回True或False |</span><br><span class="line">| &gt;&#x3D;和&lt;&#x3D; | 大于等于和小于等于   | 返回True或False |</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">---</span><br><span class="line">* 清洗异常值</span><br><span class="line">    * 查空值,用&#96;&#96;&#96;pd.isnull()&#96;&#96;&#96;会返回布尔类值，此时pd.isnull()是一个新的Series或者DataFrame对象，&#96;&#96;&#96;isnan()&#96;&#96;&#96;和&#96;&#96;&#96;isnull()&#96;&#96;&#96;作用相同</span><br><span class="line"></span><br><span class="line">    &#96;&#96;&#96;python</span><br><span class="line">    In [1]:Series1&#x3D;pd.Series(np.arange(5))</span><br><span class="line">           Series1[2]&#x3D;np.nan</span><br><span class="line">           Series1.isnull()</span><br><span class="line">    Out[1]: </span><br><span class="line">    0    False</span><br><span class="line">    1    False</span><br><span class="line">    2     True</span><br><span class="line">    3    False</span><br><span class="line">    4    False</span><br><span class="line">    dtype: bool</span><br><span class="line">        </span><br><span class="line">    In[2] :type(Series1.isnull())</span><br><span class="line">    Out[2]:pandas.core.series.Series</span><br></pre></td></tr></table></figure>
+
+<pre><code>* 去空值,在pandas中0并不是空值空值一般用```np.nan```表示,利用```pd.dropna(
+subet=[]         #指定单个行或多个行，列也是，
+axis=0 or 1,  #0表示行，1表示列
+how=&quot;all&quot;       #表示全为空值的时候，
+inplace=False    #是否直接替换DataFrame或Series）```
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">In [<span class="number">1</span>] :T=np.nan</span><br><span class="line">        print(T)</span><br><span class="line">Out[<span class="number">1</span>]: nan</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">In [<span class="number">2</span>]:type(T)</span><br><span class="line">Out[<span class="number">2</span>]:float</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">In [<span class="number">1</span>]:T=pd.DataFrame(&#123;</span><br><span class="line">         <span class="string">'性别'</span>:[<span class="string">'女'</span>,<span class="string">"女"</span>,<span class="string">"男"</span>,<span class="string">"女"</span>,<span class="string">"男"</span>],</span><br><span class="line">         <span class="string">"年龄"</span>:[np.nan,np.nan,<span class="number">28</span>,<span class="number">32</span>,<span class="number">39</span>],</span><br><span class="line">         <span class="string">"血型"</span>:[np.nan,<span class="string">"C"</span>,<span class="string">"B"</span>,np.nan,<span class="string">"A"</span>]</span><br><span class="line">         &#125;)</span><br><span class="line">Out[<span class="number">1</span>]:   性别  年龄  血型</span><br><span class="line">        <span class="number">0</span>  女   NaN  NaN</span><br><span class="line">        <span class="number">1</span>  女   NaN    C</span><br><span class="line">        <span class="number">2</span>  男  <span class="number">28.0</span>    B</span><br><span class="line">        <span class="number">3</span>  女  <span class="number">32.0</span>  NaN</span><br><span class="line">        <span class="number">4</span>  男  <span class="number">39.0</span>    A</span><br><span class="line">        </span><br><span class="line">In [<span class="number">2</span>]:T.dropna(subset=[<span class="string">'血型'</span>,<span class="string">'年 龄'</span>],axis=<span class="number">0</span>,how=<span class="string">'all'</span>,inplace=<span class="literal">False</span>)</span><br><span class="line">Out[<span class="number">2</span>]: 性别    年龄   血型</span><br><span class="line">        <span class="number">1</span>  女   NaN    C</span><br><span class="line">        <span class="number">2</span>  男  <span class="number">28.0</span>    B</span><br><span class="line">        <span class="number">3</span>  女  <span class="number">32.0</span>  NaN</span><br><span class="line">        <span class="number">4</span>  男  <span class="number">39.0</span>    A</span><br></pre></td></tr></table></figure></code></pre><hr>
+<ul>
+<li>替换数据<br>  一般使用<code>pd.DataFrame or Series.replace</code>函数。常见的有字典映射和直接映射,也可以用后面会使用到的  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">    pandas自带的replace只能替换整个单元格的内容，不能对单元格中某个字符进行替换。</span><br><span class="line">    </span><br><span class="line">&#96;&#96;&#96; replace(value,axis,limited,method,inplace)</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">参数</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">value</td>
+<td align="center">要填充的值，可以是字典，或者元素相同的列表</td>
+</tr>
+<tr>
+<td align="center">axis</td>
+<td align="center">1为columns，0为rows</td>
+</tr>
+<tr>
+<td align="center">limit</td>
+<td align="center">替换的次数。 比如一行有5个空缺值，此时limited为2那么只会填充2个空缺值，还有3个空缺值剩下。</td>
+</tr>
+<tr>
+<td align="center">method</td>
+<td align="center">ffill/pad 从上向下自动填充，延续上面的值 bfill/backfill 从下向上自动填充，延续下面的值</td>
+</tr>
+<tr>
+<td align="center">inplace</td>
+<td align="center">True则直接在原DataFrame或Series中执行，默认是False</td>
+</tr>
+</tbody></table>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">In [<span class="number">1</span>]: T.replace(&#123;<span class="string">'C'</span>:<span class="string">'XXXX'</span>,<span class="string">"男"</span>:<span class="string">"Male"</span>&#125;)</span><br><span class="line">        Or </span><br><span class="line">        T.replace([<span class="string">'C'</span>,<span class="string">'男'</span>],[<span class="string">'XXXX'</span>,<span class="string">'Male'</span>])</span><br><span class="line">Out[<span class="number">1</span>]: </span><br><span class="line">            性别    年龄    血型</span><br><span class="line">            <span class="number">0</span>  NaN   NaN   NaN</span><br><span class="line">            <span class="number">1</span>    女   NaN  XXXX</span><br><span class="line">            <span class="number">2</span>    男  <span class="number">28.0</span>     B</span><br><span class="line">            <span class="number">3</span>    女  <span class="number">32.0</span>   NaN</span><br><span class="line">            <span class="number">4</span>    男  <span class="number">39.0</span>     A</span><br></pre></td></tr></table></figure>
+
+<p>针对空缺值，一般使用<code>fillna()</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">| 参数     | 描述   |</span><br><span class="line">|:------:|:--------------------------------------------------------:|</span><br><span class="line">| value  | 要填充Nan的值，可以是字典                                           |</span><br><span class="line">| axis   | 1为columns，0为rows                                         |</span><br><span class="line">| limit  | 替换的次数。 比如一行有5个空缺值，此时limited为2那么只会填充2个空缺值，还有3个空缺值剩下。      |</span><br><span class="line">| method | ffill&#x2F;pad 从上向下自动填充，延续上面的值 bfill&#x2F;backfill 从下向上自动填充，延续下面的值 |</span><br><span class="line">| inplace | True则直接在原DataFrame或Series中执行，默认是False |</span><br><span class="line">   </span><br><span class="line">----    </span><br><span class="line">* 筛选&amp;索引数据:</span><br><span class="line">    * 一般筛选</span><br><span class="line">    &#96;&#96;&#96;loc&#96;&#96;&#96;和&#96;&#96;&#96;ilc&#96;&#96;&#96;，都是用来索引数据的，其中&#96;&#96;&#96;loc&#96;&#96;&#96;用**标签**来索引，而&#96;&#96;&#96;iloc&#96;&#96;&#96;用**数值**来索引，&#96;&#96;&#96;iloc&#96;&#96;&#96;的索引符合切片的语法原则，即尾巴不算在内[2:4]实际上只取2到3，而不会取到4。</span><br><span class="line">    </span><br><span class="line">        &#96;&#96;&#96;python</span><br><span class="line">        In [1]:T.loc[2:3,:]</span><br><span class="line">        Out[1]: </span><br><span class="line">                  性别   年龄  血型</span><br><span class="line">                2  男  28.0    B</span><br><span class="line">                3  女  32.0  NaN</span><br><span class="line">        In [2]:T.loc[2:3,[&#39;性别&#39;,&#39;血型&#39;]]</span><br><span class="line">        Out[2]: </span><br><span class="line">                  性别   血型</span><br><span class="line">                2  男    B</span><br><span class="line">                3  女  NaN</span><br><span class="line">        In [3]:T.iloc[2:4,:]</span><br><span class="line">        Out[3]: </span><br><span class="line">                  性别   年龄  血型</span><br><span class="line">                2  男  28.0    B</span><br><span class="line">                3  女  32.0  NaN</span><br><span class="line">        In [4]:T.iloc[2:4,[0,2]]</span><br><span class="line">        Out[4]: </span><br><span class="line">                  性别   血型</span><br><span class="line">                2  男    B</span><br><span class="line">                3  女  NaN</span><br><span class="line">        In [5]:T.iloc[2:4,0:3]</span><br><span class="line">        Out[5]: </span><br><span class="line">                  性别  年龄  血型</span><br><span class="line">                2  男  28.0    B</span><br><span class="line">                3  女  32.0  NaN</span><br><span class="line">        &#96;&#96;&#96; </span><br><span class="line">    * 多层索引</span><br><span class="line">    </span><br><span class="line">    * 条件筛选 </span><br><span class="line">    常用逻辑符号进行筛选,在pandas中得用一下符号代替逻辑运算符&#96;&#96;&#96;|&#96;&#96;&#96;相当于&#96;&#96;&#96;or&#96;&#96;&#96;，&#96;&#96;&#96;&amp;&#96;&#96;&#96;相当于&#96;&#96;&#96;and&#96;&#96;&#96;，&#96;&#96;&#96;~&#96;&#96;&#96;相对于&#96;&#96;&#96;not&#96;&#96;&#96;。</span><br><span class="line"></span><br><span class="line">            </span><br><span class="line">        &#96;&#96;&#96;python</span><br><span class="line">        In [1]:T[(T[&#39;年龄&#39;]&gt;30)|(T[&#39;性别&#39;]&#x3D;&#x3D;&quot;男&quot;)]</span><br><span class="line">        Out[1]:</span><br><span class="line">              性别   年龄   血型</span><br><span class="line">            2  男  28.0    B</span><br><span class="line">            3  女  32.0  NaN</span><br><span class="line">            4  男  39.0    A </span><br><span class="line">        In [2]:T[(T[&#39;年龄&#39;]&gt;30) &amp; (T[&#39;性别&#39;]&#x3D;&#x3D;&quot;男&quot;)]</span><br><span class="line">        Out[2]:</span><br><span class="line">             性别  年龄  血型</span><br><span class="line">            4  男  39.0  A        </span><br><span class="line">        In [2]:T[(T[&#39;年龄&#39;]&gt;30) &amp; (T[&#39;性别&#39;]&#x3D;&#x3D;&quot;男&quot;)]</span><br><span class="line">        Out[2]:</span><br><span class="line">             性别  年龄  血型</span><br><span class="line">            4  男  39.0  A</span><br><span class="line">        In [3]:T[(T[&#39;年龄&#39;]&gt;30) &amp;~ (T[&#39;性别&#39;]&#x3D;&#x3D;&quot;男&quot;)]  </span><br><span class="line">        Out[3]:  </span><br><span class="line">             性别  年龄  血型</span><br><span class="line">            3  女  32.0  NaN   </span><br><span class="line">        In [4]:T[T[&#39;年龄&#39;].isnull()]</span><br><span class="line">        Out[4]:</span><br><span class="line">             性别  年龄   血型</span><br><span class="line">            0  NaN NaN  NaN</span><br><span class="line">            1  女   NaN   C</span><br></pre></td></tr></table></figure>
+<pre><code>根据某列判断来筛选</code></pre><hr>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/07/14/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%9A%84%E9%BB%91%E7%AE%B1%E9%80%BB%E8%BE%91%E6%8E%A8%E6%B5%8B-%E5%B9%B3%E5%AE%89%E7%A7%91%E6%8A%80-/" data-id="ckd323w560000iuzh1a6h9h15" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/08/01/Pandas%E4%B8%8EExcel%E7%9A%84%E4%BD%BF%E7%94%A8%E6%AF%94%E8%BE%83%E4%B8%8E%E6%80%BB%E7%BB%93/" data-id="cke5k2mh8000in5zh1ewv0i63" class="article-share-link">Share</a>
       
       
     </footer>
@@ -360,10 +684,10 @@
 
 
   
-    <article id="post-穿越镀金时代-邵宇（阅读）" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-给pychrme配置conda环境" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/07/14/%E7%A9%BF%E8%B6%8A%E9%95%80%E9%87%91%E6%97%B6%E4%BB%A3-%E9%82%B5%E5%AE%87%EF%BC%88%E9%98%85%E8%AF%BB%EF%BC%89/" class="article-date">
-  <time datetime="2020-07-14T01:35:45.611Z" itemprop="datePublished">2020-07-14</time>
+    <a href="/2020/07/30/%E7%BB%99pychrme%E9%85%8D%E7%BD%AEconda%E7%8E%AF%E5%A2%83/" class="article-date">
+  <time datetime="2020-07-30T15:56:57.324Z" itemprop="datePublished">2020-07-30</time>
 </a>
     
   </div>
@@ -374,7 +698,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/14/%E7%A9%BF%E8%B6%8A%E9%95%80%E9%87%91%E6%97%B6%E4%BB%A3-%E9%82%B5%E5%AE%87%EF%BC%88%E9%98%85%E8%AF%BB%EF%BC%89/">穿越镀金时代-邵宇（阅读）</a>
+      <a class="article-title" href="/2020/07/30/%E7%BB%99pychrme%E9%85%8D%E7%BD%AEconda%E7%8E%AF%E5%A2%83/">给pychrme配置conda环境</a>
     </h1>
   
 
@@ -382,96 +706,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="流动性经济学"><a href="#流动性经济学" class="headerlink" title="流动性经济学"></a>流动性经济学</h1><blockquote>
-<p>某种程度上，我们都生活在货币幻觉下。</p>
-</blockquote>
-<p>货币幻觉指的是通胀大于实际购买力，即收入上涨的情况，并没有导致你的实际购买力增加，只是单纯的货币供应量的增加。这种自以为“收入增加和实际购买力增加”划等号的感觉，称为货币幻觉。<br>从历史上来看，全球正进入资产泡沫时代。<br><img src="/images/15946918136650.jpg" alt=""><br>为何说流动性如果成为重要因素，那么很多经济学理论都要改写呢？</p>
-<blockquote>
-<p>回顾<br>已有的与货币相关的经济学说</p>
-</blockquote>
+        <h1 id="给Pycharm配置anaconda环境"><a href="#给Pycharm配置anaconda环境" class="headerlink" title="给Pycharm配置anaconda环境"></a>给Pycharm配置anaconda环境</h1><p>在anaconda文件夹中bin里面有一个python3.Xconfig 下面又一个python3.x的文件，这个即是解释器。<br>如果你有创建新的环境的话，那么会放在env文件夹中，同样选择上面的文件。<br>并且在勾选的时候选择<br><img src="/images/15961248723444.jpg" alt="-w998"><br><img src="/images/15961249523219.jpg" alt="-w836"></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/07/14/%E7%A9%BF%E8%B6%8A%E9%95%80%E9%87%91%E6%97%B6%E4%BB%A3-%E9%82%B5%E5%AE%87%EF%BC%88%E9%98%85%E8%AF%BB%EF%BC%89/" data-id="ckd323w62000giuzh3imt0i9q" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Pandas-Pivot Table" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/07/14/Pandas-Pivot%20Table/" class="article-date">
-  <time datetime="2020-07-14T01:14:05.406Z" itemprop="datePublished">2020-07-14</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/14/Pandas-Pivot%20Table/">Pandas-Pivot Table</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Pandas"><a href="#Pandas" class="headerlink" title="Pandas"></a>Pandas</h1><blockquote>
-<p>Groupby 和 Pivot_table</p>
-</blockquote>
-<p>类似excle中的数据透视表。<br>goupby是一种聚合方法，而pivot_table则是数据透视表<img src="/images/15948269340528.jpg" alt="-w812"><br>能用groupby的一定可以用pivot_table方法。</p>
-<p>pivot_table(self, values=None, index=None, columns=None, aggfunc=’mean’, fill_value=None, margins=False, dropna=True, margins_name=’All’, observed=False)</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/07/14/Pandas-Pivot%20Table/" data-id="ckd323w5q0002iuzhah5c8yle" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-T恤比较" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/07/11/T%E6%81%A4%E6%AF%94%E8%BE%83/" class="article-date">
-  <time datetime="2020-07-11T06:07:35.507Z" itemprop="datePublished">2020-07-11</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/11/T%E6%81%A4%E6%AF%94%E8%BE%83/">T恤比较</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="T恤比较"><a href="#T恤比较" class="headerlink" title="T恤比较"></a>T恤比较</h1><p>优衣库M码<br><img src="/images/15944476650949.jpg" alt="-w574"></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/07/11/T%E6%81%A4%E6%AF%94%E8%BE%83/" data-id="ckd323w5x0009iuzh89gy1o2z" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/07/30/%E7%BB%99pychrme%E9%85%8D%E7%BD%AEconda%E7%8E%AF%E5%A2%83/" data-id="cke5k2mht000yn5zhcldc9fxr" class="article-share-link">Share</a>
       
       
     </footer>
@@ -485,7 +725,7 @@
 
   <nav id="page-nav">
     
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
   </nav>
 
 </section>
@@ -496,7 +736,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80/">计算机语言</a></li></ul>
     </div>
   </div>
 
@@ -525,7 +765,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li></ul>
     </div>
   </div>
 
@@ -538,23 +778,23 @@
       <ul>
         
           <li>
-            <a href="/2020/07/26/%E5%88%86%E7%B1%BB%E5%92%8C%E6%A0%87%E7%AD%BE%E9%9B%86%E5%90%88/">分类和标签集合</a>
+            <a href="/2020/08/22/markdown%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/">markdown显示问题</a>
           </li>
         
           <li>
-            <a href="/2020/07/25/Requests%E5%BA%93/">Requests库</a>
+            <a href="/2020/08/22/Numpy%E7%9A%84random%E5%85%A5%E9%97%A8/">Numpy的random入门</a>
           </li>
         
           <li>
-            <a href="/2020/07/25/JSON%E5%BA%93%E4%BD%BF%E7%94%A8/">JSON库使用</a>
+            <a href="/2020/08/21/list%E7%9A%84%E4%BD%BF%E7%94%A8/">list的使用</a>
           </li>
         
           <li>
-            <a href="/2020/07/23/Pandas/">Pandas</a>
+            <a href="/2020/08/12/Pandas%E5%92%8C%E9%81%8D%E5%8E%86/">Pandas和遍历</a>
           </li>
         
           <li>
-            <a href="/2020/07/21/%E5%BD%92%E4%B8%80%E5%8C%96%E5%92%8C%E6%A0%87%E5%87%86%E5%8C%96/">归一化和标准化</a>
+            <a href="/2020/08/12/SQL%E5%AD%A6%E4%B9%A0/">SQL学习</a>
           </li>
         
       </ul>
