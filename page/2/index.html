@@ -64,6 +64,308 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-指数研究" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/08/07/%E6%8C%87%E6%95%B0%E7%A0%94%E7%A9%B6/" class="article-date">
+  <time datetime="2020-08-07T05:39:20.964Z" itemprop="datePublished">2020-08-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/08/07/%E6%8C%87%E6%95%B0%E7%A0%94%E7%A9%B6/">指数研究</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="指数的含义"><a href="#指数的含义" class="headerlink" title="指数的含义"></a>指数的含义</h1><p>反映宏观变化</p>
+<p>##义乌指数<br>义乌指数的的构成和分类<br>场内直接交易价格和场内订单价格的却别是，一个是现货，另外一个是订单即延后交货。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/08/07/%E6%8C%87%E6%95%B0%E7%A0%94%E7%A9%B6/" data-id="ckjy6sj78001bgezh8jww5aqh" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-爬虫知识储备" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/08/05/%E7%88%AC%E8%99%AB%E7%9F%A5%E8%AF%86%E5%82%A8%E5%A4%87/" class="article-date">
+  <time datetime="2020-08-05T05:11:56.286Z" itemprop="datePublished">2020-08-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/08/05/%E7%88%AC%E8%99%AB%E7%9F%A5%E8%AF%86%E5%82%A8%E5%A4%87/">爬虫知识储备</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="爬虫的知识储备"><a href="#爬虫的知识储备" class="headerlink" title="爬虫的知识储备"></a>爬虫的知识储备</h1><p>HTML和XPath以及CSS selector</p>
+<hr>
+<p>HTML又叫HyperText Markup Language，常和CSS以及JaveScript一起被用于设计网站。作为一种结构和标记语言使用。<br>在python中常用bs4对网页进行解析，支持HTML和CSS。</p>
+<ul>
+<li>第一層是 <code>&lt;html&gt;...&lt;/html&gt;</code></li>
+<li>第二層是 <code>&lt;head&gt;...&lt;/head&gt;</code>與 <code>&lt;body&gt;...&lt;/body&gt;</code></li>
+<li>第三層是 <code>&lt;title&gt;...&lt;/title&gt;</code> 、<code>&lt;h1&gt;...&lt;/h1&gt;</code> 與三組 <code>&lt;p&gt;...&lt;/p&gt;</code></li>
+</ul>
+<p><img src="/images/15966045834891.jpg" alt="-w549"></p>
+<p>用法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">url=<span class="string">"xxxxx"</span></span><br><span class="line">r=request.get(url,timeout=<span class="number">30</span>)</span><br><span class="line">r.raise_for_status()</span><br><span class="line">r.encoding=r.apparent_encoding</span><br><span class="line">html_str=r.text</span><br><span class="line">soup = BeautifulSoup(html_str)</span><br><span class="line">print(soup.find(<span class="string">"h1"</span>).text)</span><br><span class="line"><span class="keyword">for</span> movie_title <span class="keyword">in</span> soup.find_all(<span class="string">"p"</span>):</span><br><span class="line">    print(movie_title.text)</span><br></pre></td></tr></table></figure>
+
+<p>除了文字信息外，我们还可能要求获取标记中的属性</p>
+<ul>
+<li>id 用來標註不同的<code>&lt;div&gt;...&lt;/div&gt;</code> 、<code>&lt;li&gt;...&lt;/li&gt;</code></li>
+<li>class 用來標註三組<code>&lt;li&gt;...&lt;/li&gt;</code></li>
+<li>href 是 <code>&lt;a&gt;...&lt;/a&gt;</code>的連結網址屬性<br><img src="/images/15966049122990.jpg" alt="-w635"><br>用法<code>(soup.find(id=&quot;movie-3&quot;).find(&quot;a&quot;).get(&quot;href&quot;))</code></li>
+</ul>
+<hr>
+<p>XPath又叫XML Path Language与CSS一起常用来定位HTML档案中元素。<br>在python中bs4并不支持XPath语言，但是其他常用解析库比如lxml、Selenium和Scrapy等都支持该语言。</p>
+<p>XPath的基本组成</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/html/body/p[<span class="number">4</span>]/text()<span class="comment">#[]用来指定内容</span></span><br><span class="line">//p[<span class="number">4</span>]/text()<span class="comment">#text()用来获取文本内容</span></span><br></pre></td></tr></table></figure>
+
+<p>XPath的4种常见定位方法</p>
+<ul>
+<li>根节点与非根节点<ul>
+<li><code>/div</code>选择div节点（当div为根节点的时候），理解为在树状结构中向下移动一层。</li>
+<li><code>//div</code>选择所有的div节点，包括非根节点，理解为在树状结构中的所以层寻找指定标记。</li>
+</ul>
+</li>
+<li>通过属性选择节点<ul>
+<li><code>@</code>用来指定属性，比如<code>id</code> \ <code>class</code>\ <code>href</code>等。</li>
+<li><code>//@href</code></li>
+<li><code>//a[@href = &#39;http://google.com&#39;]</code></li>
+</ul>
+</li>
+<li>通过位置选择<ul>
+<li><code>//[3]</code>选择第三个</li>
+<li><code>//table[last()]</code>选择最后一个表</li>
+<li><code>a[position()&lt;3]</code>选择前三个</li>
+</ul>
+</li>
+<li>配合<code>*</code>匹配任意字符和节点<ul>
+<li><code>//table/tr/*</code></li>
+<li><code>//div[@*]</code></li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>CSS Selector，Cascading Style Sheets Selector，又叫层叠表，常用来改变HTML的呈现外观。<br>改变字体颜色。<br><img src="/images/15966301632705.jpg" alt="-w565"><br>或改变字体大小。<img src="/images/15966302006864.jpg" alt="-w628"></p>
+<p>CSS的基本用法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#96;&#96;&#96;空格&#96;&#96;&#96;类似XPath中的&#96;&#96;&#96;&#x2F;&#x2F;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#96;&#96;&#96;.&#96;&#96;&#96;类似XPath中的&#96;&#96;&#96;@&#96;&#96;&#96;来指定class属性</span><br><span class="line">&#96;&#96;&#96;#&#96;&#96;&#96;类似XPath中的&#96;&#96;&#96;@&#96;&#96;&#96;来指定id属性</span><br><span class="line">&#96;&#96;&#96;::text&#96;&#96;&#96;类似XPath中的&#96;&#96;&#96;text()&#96;&#96;&#96;用来获取内容</span><br><span class="line"></span><br><span class="line">用法：</span><br><span class="line">&#96;&#96;&#96;python</span><br><span class="line">soup &#x3D; BeautifulSoup(html_str)</span><br><span class="line">print(soup.select(&#39;html &gt; body &gt; p:nth-of-type(4)&#39;)[0].text)</span><br><span class="line">print(soup.select(&#39;p:nth-of-type(4)&#39;)[0].text)</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/08/05/%E7%88%AC%E8%99%AB%E7%9F%A5%E8%AF%86%E5%82%A8%E5%A4%87/" data-id="ckjy6sj7c001igezhe2sl45ti" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-如何将Anaconda配置到全局变量中" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/08/04/%E5%A6%82%E4%BD%95%E5%B0%86Anaconda%E9%85%8D%E7%BD%AE%E5%88%B0%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F%E4%B8%AD/" class="article-date">
+  <time datetime="2020-08-04T07:34:00.919Z" itemprop="datePublished">2020-08-04</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/08/04/%E5%A6%82%E4%BD%95%E5%B0%86Anaconda%E9%85%8D%E7%BD%AE%E5%88%B0%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F%E4%B8%AD/">如何将Anaconda配置到全局变量中</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="如何将Anaconda配置到全局中（Mac）"><a href="#如何将Anaconda配置到全局中（Mac）" class="headerlink" title="如何将Anaconda配置到全局中（Mac）"></a>如何将Anaconda配置到全局中（Mac）</h1><p>首先安装ZSH版本的shells</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">vim ~&#x2F;.bash_profile # 我用的shell是zsh ，所以我输入 vim ~&#x2F;.zshrc</span><br><span class="line"></span><br><span class="line">export PATH&#x3D;&quot;~&#x2F;anaconda3&#x2F;bin:$PATH&quot;</span><br><span class="line"></span><br><span class="line">source ~&#x2F;.zshrc</span><br></pre></td></tr></table></figure>
+<p>注意文件路径改成你自己anaconda3下面bin的路径就好了。</p>
+<p>source激活后，就可以直接在终端中使用pip和其他命令行功能了，比如spyder直接打开spyder软件等。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/08/04/%E5%A6%82%E4%BD%95%E5%B0%86Anaconda%E9%85%8D%E7%BD%AE%E5%88%B0%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F%E4%B8%AD/" data-id="ckjy6sj79001cgezhgld7e5fn" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Pandas与Excel的使用比较与总结" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/08/01/Pandas%E4%B8%8EExcel%E7%9A%84%E4%BD%BF%E7%94%A8%E6%AF%94%E8%BE%83%E4%B8%8E%E6%80%BB%E7%BB%93/" class="article-date">
+  <time datetime="2020-08-01T03:29:00.513Z" itemprop="datePublished">2020-08-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/08/01/Pandas%E4%B8%8EExcel%E7%9A%84%E4%BD%BF%E7%94%A8%E6%AF%94%E8%BE%83%E4%B8%8E%E6%80%BB%E7%BB%93/">Pandas与Excel的使用比较与总结</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Pandas与Excel的类比"><a href="#Pandas与Excel的类比" class="headerlink" title="Pandas与Excel的类比"></a>Pandas与Excel的类比</h1><h4 id="结论："><a href="#结论：" class="headerlink" title="结论："></a>结论：</h4><p>1.两者都是数据处理工具,Pandas在大量数据运算时候非常有优势,单纯对比下Excel可视化程度更高。<br>2.如果是一次性操作，Excel实现起来更快,因为很多操作都黑箱化了.不过对Pandas利用熟练或者有封装好的函数也可以实现<br>3.最重要的是Pandas可以程序化重复使用，虽然Excel也可以。<br>4.Pandas的可视化和数据展示得结合其他库的使用，这个后续有待开发</p>
+<hr>
+<p>清洗异常值:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">替换数据:</span><br><span class="line">&#96;&#96;&#96;pd.df.replace</span><br></pre></td></tr></table></figure>
+<p>筛选数据:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">| 运算符   | 描述          | 实例           |</span><br><span class="line">|-------|-------------|--------------|</span><br><span class="line">| &#x3D;&#x3D;    | 等于，判断是否相等   | 返回True或False |</span><br><span class="line">| !&#x3D;    | 不等于，判断是否不相等 | 返回True或False |</span><br><span class="line">| &gt;和&lt;   | 大于和小于       | 返回True或False |</span><br><span class="line">| &gt;&#x3D;和&lt;&#x3D; | 大于等于和小于等于   | 返回True或False |</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">---</span><br><span class="line">* 清洗异常值</span><br><span class="line">    * 查空值,用&#96;&#96;&#96;pd.isnull()&#96;&#96;&#96;会返回布尔类值，此时pd.isnull()是一个新的Series或者DataFrame对象，&#96;&#96;&#96;isnan()&#96;&#96;&#96;和&#96;&#96;&#96;isnull()&#96;&#96;&#96;作用相同</span><br><span class="line"></span><br><span class="line">    &#96;&#96;&#96;python</span><br><span class="line">    In [1]:Series1&#x3D;pd.Series(np.arange(5))</span><br><span class="line">           Series1[2]&#x3D;np.nan</span><br><span class="line">           Series1.isnull()</span><br><span class="line">    Out[1]: </span><br><span class="line">    0    False</span><br><span class="line">    1    False</span><br><span class="line">    2     True</span><br><span class="line">    3    False</span><br><span class="line">    4    False</span><br><span class="line">    dtype: bool</span><br><span class="line">        </span><br><span class="line">    In[2] :type(Series1.isnull())</span><br><span class="line">    Out[2]:pandas.core.series.Series</span><br></pre></td></tr></table></figure>
+
+<pre><code>* 去空值,在pandas中0并不是空值空值一般用```np.nan```表示,利用```pd.dropna(
+subet=[]         #指定单个行或多个行，列也是，
+axis=0 or 1,  #0表示行，1表示列
+how=&quot;all&quot;       #表示全为空值的时候，
+inplace=False    #是否直接替换DataFrame或Series）```
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">In [<span class="number">1</span>] :T=np.nan</span><br><span class="line">        print(T)</span><br><span class="line">Out[<span class="number">1</span>]: nan</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">In [<span class="number">2</span>]:type(T)</span><br><span class="line">Out[<span class="number">2</span>]:float</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">In [<span class="number">1</span>]:T=pd.DataFrame(&#123;</span><br><span class="line">         <span class="string">'性别'</span>:[<span class="string">'女'</span>,<span class="string">"女"</span>,<span class="string">"男"</span>,<span class="string">"女"</span>,<span class="string">"男"</span>],</span><br><span class="line">         <span class="string">"年龄"</span>:[np.nan,np.nan,<span class="number">28</span>,<span class="number">32</span>,<span class="number">39</span>],</span><br><span class="line">         <span class="string">"血型"</span>:[np.nan,<span class="string">"C"</span>,<span class="string">"B"</span>,np.nan,<span class="string">"A"</span>]</span><br><span class="line">         &#125;)</span><br><span class="line">Out[<span class="number">1</span>]:   性别  年龄  血型</span><br><span class="line">        <span class="number">0</span>  女   NaN  NaN</span><br><span class="line">        <span class="number">1</span>  女   NaN    C</span><br><span class="line">        <span class="number">2</span>  男  <span class="number">28.0</span>    B</span><br><span class="line">        <span class="number">3</span>  女  <span class="number">32.0</span>  NaN</span><br><span class="line">        <span class="number">4</span>  男  <span class="number">39.0</span>    A</span><br><span class="line">        </span><br><span class="line">In [<span class="number">2</span>]:T.dropna(subset=[<span class="string">'血型'</span>,<span class="string">'年 龄'</span>],axis=<span class="number">0</span>,how=<span class="string">'all'</span>,inplace=<span class="literal">False</span>)</span><br><span class="line">Out[<span class="number">2</span>]: 性别    年龄   血型</span><br><span class="line">        <span class="number">1</span>  女   NaN    C</span><br><span class="line">        <span class="number">2</span>  男  <span class="number">28.0</span>    B</span><br><span class="line">        <span class="number">3</span>  女  <span class="number">32.0</span>  NaN</span><br><span class="line">        <span class="number">4</span>  男  <span class="number">39.0</span>    A</span><br></pre></td></tr></table></figure></code></pre><hr>
+<ul>
+<li>替换数据<br>  一般使用<code>pd.DataFrame or Series.replace</code>函数。常见的有字典映射和直接映射,也可以用后面会使用到的  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">    pandas自带的replace只能替换整个单元格的内容，不能对单元格中某个字符进行替换。</span><br><span class="line">    </span><br><span class="line">&#96;&#96;&#96; replace(value,axis,limited,method,inplace)</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">参数</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">value</td>
+<td align="center">要填充的值，可以是字典，或者元素相同的列表</td>
+</tr>
+<tr>
+<td align="center">axis</td>
+<td align="center">1为columns，0为rows</td>
+</tr>
+<tr>
+<td align="center">limit</td>
+<td align="center">替换的次数。 比如一行有5个空缺值，此时limited为2那么只会填充2个空缺值，还有3个空缺值剩下。</td>
+</tr>
+<tr>
+<td align="center">method</td>
+<td align="center">ffill/pad 从上向下自动填充，延续上面的值 bfill/backfill 从下向上自动填充，延续下面的值</td>
+</tr>
+<tr>
+<td align="center">inplace</td>
+<td align="center">True则直接在原DataFrame或Series中执行，默认是False</td>
+</tr>
+</tbody></table>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">In [<span class="number">1</span>]: T.replace(&#123;<span class="string">'C'</span>:<span class="string">'XXXX'</span>,<span class="string">"男"</span>:<span class="string">"Male"</span>&#125;)</span><br><span class="line">        Or </span><br><span class="line">        T.replace([<span class="string">'C'</span>,<span class="string">'男'</span>],[<span class="string">'XXXX'</span>,<span class="string">'Male'</span>])</span><br><span class="line">Out[<span class="number">1</span>]: </span><br><span class="line">            性别    年龄    血型</span><br><span class="line">            <span class="number">0</span>  NaN   NaN   NaN</span><br><span class="line">            <span class="number">1</span>    女   NaN  XXXX</span><br><span class="line">            <span class="number">2</span>    男  <span class="number">28.0</span>     B</span><br><span class="line">            <span class="number">3</span>    女  <span class="number">32.0</span>   NaN</span><br><span class="line">            <span class="number">4</span>    男  <span class="number">39.0</span>     A</span><br></pre></td></tr></table></figure>
+
+<p>针对空缺值，一般使用<code>fillna()</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">| 参数     | 描述   |</span><br><span class="line">|:------:|:--------------------------------------------------------:|</span><br><span class="line">| value  | 要填充Nan的值，可以是字典                                           |</span><br><span class="line">| axis   | 1为columns，0为rows                                         |</span><br><span class="line">| limit  | 替换的次数。 比如一行有5个空缺值，此时limited为2那么只会填充2个空缺值，还有3个空缺值剩下。      |</span><br><span class="line">| method | ffill&#x2F;pad 从上向下自动填充，延续上面的值 bfill&#x2F;backfill 从下向上自动填充，延续下面的值 |</span><br><span class="line">| inplace | True则直接在原DataFrame或Series中执行，默认是False |</span><br><span class="line">   </span><br><span class="line">----    </span><br><span class="line">* 筛选&amp;索引数据:</span><br><span class="line">    * 一般筛选</span><br><span class="line">    &#96;&#96;&#96;loc&#96;&#96;&#96;和&#96;&#96;&#96;ilc&#96;&#96;&#96;，都是用来索引数据的，其中&#96;&#96;&#96;loc&#96;&#96;&#96;用**标签**来索引，而&#96;&#96;&#96;iloc&#96;&#96;&#96;用**数值**来索引，&#96;&#96;&#96;iloc&#96;&#96;&#96;的索引符合切片的语法原则，即尾巴不算在内[2:4]实际上只取2到3，而不会取到4。</span><br><span class="line">    </span><br><span class="line">        &#96;&#96;&#96;python</span><br><span class="line">        In [1]:T.loc[2:3,:]</span><br><span class="line">        Out[1]: </span><br><span class="line">                  性别   年龄  血型</span><br><span class="line">                2  男  28.0    B</span><br><span class="line">                3  女  32.0  NaN</span><br><span class="line">        In [2]:T.loc[2:3,[&#39;性别&#39;,&#39;血型&#39;]]</span><br><span class="line">        Out[2]: </span><br><span class="line">                  性别   血型</span><br><span class="line">                2  男    B</span><br><span class="line">                3  女  NaN</span><br><span class="line">        In [3]:T.iloc[2:4,:]</span><br><span class="line">        Out[3]: </span><br><span class="line">                  性别   年龄  血型</span><br><span class="line">                2  男  28.0    B</span><br><span class="line">                3  女  32.0  NaN</span><br><span class="line">        In [4]:T.iloc[2:4,[0,2]]</span><br><span class="line">        Out[4]: </span><br><span class="line">                  性别   血型</span><br><span class="line">                2  男    B</span><br><span class="line">                3  女  NaN</span><br><span class="line">        In [5]:T.iloc[2:4,0:3]</span><br><span class="line">        Out[5]: </span><br><span class="line">                  性别  年龄  血型</span><br><span class="line">                2  男  28.0    B</span><br><span class="line">                3  女  32.0  NaN</span><br><span class="line">        &#96;&#96;&#96; </span><br><span class="line">    * 多层索引</span><br><span class="line">    </span><br><span class="line">    * 条件筛选 </span><br><span class="line">    常用逻辑符号进行筛选,在pandas中得用一下符号代替逻辑运算符&#96;&#96;&#96;|&#96;&#96;&#96;相当于&#96;&#96;&#96;or&#96;&#96;&#96;，&#96;&#96;&#96;&amp;&#96;&#96;&#96;相当于&#96;&#96;&#96;and&#96;&#96;&#96;，&#96;&#96;&#96;~&#96;&#96;&#96;相对于&#96;&#96;&#96;not&#96;&#96;&#96;。</span><br><span class="line"></span><br><span class="line">            </span><br><span class="line">        &#96;&#96;&#96;python</span><br><span class="line">        In [1]:T[(T[&#39;年龄&#39;]&gt;30)|(T[&#39;性别&#39;]&#x3D;&#x3D;&quot;男&quot;)]</span><br><span class="line">        Out[1]:</span><br><span class="line">              性别   年龄   血型</span><br><span class="line">            2  男  28.0    B</span><br><span class="line">            3  女  32.0  NaN</span><br><span class="line">            4  男  39.0    A </span><br><span class="line">        In [2]:T[(T[&#39;年龄&#39;]&gt;30) &amp; (T[&#39;性别&#39;]&#x3D;&#x3D;&quot;男&quot;)]</span><br><span class="line">        Out[2]:</span><br><span class="line">             性别  年龄  血型</span><br><span class="line">            4  男  39.0  A        </span><br><span class="line">        In [2]:T[(T[&#39;年龄&#39;]&gt;30) &amp; (T[&#39;性别&#39;]&#x3D;&#x3D;&quot;男&quot;)]</span><br><span class="line">        Out[2]:</span><br><span class="line">             性别  年龄  血型</span><br><span class="line">            4  男  39.0  A</span><br><span class="line">        In [3]:T[(T[&#39;年龄&#39;]&gt;30) &amp;~ (T[&#39;性别&#39;]&#x3D;&#x3D;&quot;男&quot;)]  </span><br><span class="line">        Out[3]:  </span><br><span class="line">             性别  年龄  血型</span><br><span class="line">            3  女  32.0  NaN   </span><br><span class="line">        In [4]:T[T[&#39;年龄&#39;].isnull()]</span><br><span class="line">        Out[4]:</span><br><span class="line">             性别  年龄   血型</span><br><span class="line">            0  NaN NaN  NaN</span><br><span class="line">            1  女   NaN   C</span><br></pre></td></tr></table></figure>
+<pre><code>根据某列判断来筛选</code></pre><hr>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/08/01/Pandas%E4%B8%8EExcel%E7%9A%84%E4%BD%BF%E7%94%A8%E6%AF%94%E8%BE%83%E4%B8%8E%E6%80%BB%E7%BB%93/" data-id="ckjy6sj6a000cgezhg7bu4cnm" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-给pychrme配置conda环境" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/07/30/%E7%BB%99pychrme%E9%85%8D%E7%BD%AEconda%E7%8E%AF%E5%A2%83/" class="article-date">
+  <time datetime="2020-07-30T15:56:57.324Z" itemprop="datePublished">2020-07-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/30/%E7%BB%99pychrme%E9%85%8D%E7%BD%AEconda%E7%8E%AF%E5%A2%83/">给pychrme配置conda环境</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="给Pycharm配置anaconda环境"><a href="#给Pycharm配置anaconda环境" class="headerlink" title="给Pycharm配置anaconda环境"></a>给Pycharm配置anaconda环境</h1><p>在anaconda文件夹中bin里面有一个python3.Xconfig 下面又一个python3.x的文件，这个即是解释器。<br>如果你有创建新的环境的话，那么会放在env文件夹中，同样选择上面的文件。<br>并且在勾选的时候选择<br><img src="/images/15961248723444.jpg" alt="-w998"><br><img src="/images/15961249523219.jpg" alt="-w836"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/07/30/%E7%BB%99pychrme%E9%85%8D%E7%BD%AEconda%E7%8E%AF%E5%A2%83/" data-id="ckjy6sj7d001lgezhftua1jes" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Pandas入门" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/07/27/Pandas%E5%85%A5%E9%97%A8/" class="article-date">
@@ -235,7 +537,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/07/27/Pandas%E5%85%A5%E9%97%A8/" data-id="cke5l2poo00044gzh7g8e2srq" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/07/27/Pandas%E5%85%A5%E9%97%A8/" data-id="ckjy6sj650008gezh4cq28ufp" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Pandas/" rel="tag">Pandas</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li></ul>
@@ -281,7 +583,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/07/26/%E5%88%86%E7%B1%BB%E5%92%8C%E6%A0%87%E7%AD%BE%E9%9B%86%E5%90%88/" data-id="cke5l2pp7000r4gzh7u6s0bzz" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/07/26/%E5%88%86%E7%B1%BB%E5%92%8C%E6%A0%87%E7%AD%BE%E9%9B%86%E5%90%88/" data-id="ckjy6sj750016gezhgrak0b80" class="article-share-link">Share</a>
       
       
     </footer>
@@ -320,7 +622,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/07/25/Requests%E5%BA%93/" data-id="cke5l2pov000d4gzh8o0e36g8" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/07/25/Requests%E5%BA%93/" data-id="ckjy6sj6d000ggezhbid68fwi" class="article-share-link">Share</a>
       
       
     </footer>
@@ -358,7 +660,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/07/25/JSON%E5%BA%93%E4%BD%BF%E7%94%A8/" data-id="cke5l2pon00034gzh3dfadn9y" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/07/25/JSON%E5%BA%93%E4%BD%BF%E7%94%A8/" data-id="ckjy6sj610005gezh0jm6getj" class="article-share-link">Share</a>
       
       
     </footer>
@@ -406,7 +708,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/07/23/Pandas/" data-id="cke5l2pop00054gzh18pi92w8" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/07/23/Pandas/" data-id="ckjy6sj630007gezh13dz3wus" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Pandas/" rel="tag">Pandas</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li></ul>
@@ -418,220 +720,11 @@
 
 
   
-    <article id="post-归一化和标准化" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/07/21/%E5%BD%92%E4%B8%80%E5%8C%96%E5%92%8C%E6%A0%87%E5%87%86%E5%8C%96/" class="article-date">
-  <time datetime="2020-07-21T12:36:23.938Z" itemprop="datePublished">2020-07-21</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/21/%E5%BD%92%E4%B8%80%E5%8C%96%E5%92%8C%E6%A0%87%E5%87%86%E5%8C%96/">归一化和标准化</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="归一化和标准化"><a href="#归一化和标准化" class="headerlink" title="归一化和标准化"></a>归一化和标准化</h1><p>在英文的表达中归一化和标准化同属于Feature Scaling（特征缩放）的方法。</p>
-<ul>
-<li>Normalization<ul>
-<li>Max-Min Normalization<br>=$\frac{X-Min(x)}{Max(x)-Min(x)}$</li>
-<li>Mean Normalization<br>=$\frac{X-Mean(x)}{Max(x)-Min(x)}$</li>
-</ul>
-</li>
-<li>Standardization(Z-Score normalization)<pre><code>=$\frac{X-Mean(x)}{σ}$  </code></pre></li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/07/21/%E5%BD%92%E4%B8%80%E5%8C%96%E5%92%8C%E6%A0%87%E5%87%86%E5%8C%96/" data-id="cke5l2ppa000x4gzhcqeehyot" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-数据预处理问题" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/07/16/%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86%E9%97%AE%E9%A2%98/" class="article-date">
-  <time datetime="2020-07-16T06:55:47.642Z" itemprop="datePublished">2020-07-16</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/16/%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86%E9%97%AE%E9%A2%98/">数据预处理问题</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="数据预处理"><a href="#数据预处理" class="headerlink" title="数据预处理"></a>数据预处理</h1><blockquote>
-<p>为什么数据要预处理？</p>
-</blockquote>
-<p>为了达到让数据更容易被处理、计算、理解。<br>可以避免常见的一些问题：</p>
-<ol>
-<li>机器学习求解最优化的速度。</li>
-<li>量纲问题</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/07/16/%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86%E9%97%AE%E9%A2%98/" data-id="cke5l2ppa000y4gzhd4416iuj" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-知识图谱的黑箱逻辑推测-平安科技-" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/07/14/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%9A%84%E9%BB%91%E7%AE%B1%E9%80%BB%E8%BE%91%E6%8E%A8%E6%B5%8B-%E5%B9%B3%E5%AE%89%E7%A7%91%E6%8A%80-/" class="article-date">
-  <time datetime="2020-07-14T09:23:21.193Z" itemprop="datePublished">2020-07-14</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/14/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%9A%84%E9%BB%91%E7%AE%B1%E9%80%BB%E8%BE%91%E6%8E%A8%E6%B5%8B-%E5%B9%B3%E5%AE%89%E7%A7%91%E6%8A%80-/">知识图谱的黑箱逻辑推测-平安科技-</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/07/14/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%9A%84%E9%BB%91%E7%AE%B1%E9%80%BB%E8%BE%91%E6%8E%A8%E6%B5%8B-%E5%B9%B3%E5%AE%89%E7%A7%91%E6%8A%80-/" data-id="cke5l2pnu00004gzh3x1pcbyd" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-穿越镀金时代-邵宇（阅读）" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/07/14/%E7%A9%BF%E8%B6%8A%E9%95%80%E9%87%91%E6%97%B6%E4%BB%A3-%E9%82%B5%E5%AE%87%EF%BC%88%E9%98%85%E8%AF%BB%EF%BC%89/" class="article-date">
-  <time datetime="2020-07-14T01:35:45.611Z" itemprop="datePublished">2020-07-14</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/14/%E7%A9%BF%E8%B6%8A%E9%95%80%E9%87%91%E6%97%B6%E4%BB%A3-%E9%82%B5%E5%AE%87%EF%BC%88%E9%98%85%E8%AF%BB%EF%BC%89/">穿越镀金时代-邵宇（阅读）</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="流动性经济学"><a href="#流动性经济学" class="headerlink" title="流动性经济学"></a>流动性经济学</h1><blockquote>
-<p>某种程度上，我们都生活在货币幻觉下。</p>
-</blockquote>
-<p>货币幻觉指的是通胀大于实际购买力，即收入上涨的情况，并没有导致你的实际购买力增加，只是单纯的货币供应量的增加。这种自以为“收入增加和实际购买力增加”划等号的感觉，称为货币幻觉。<br>从历史上来看，全球正进入资产泡沫时代。<br><img src="/images/15946918136650.jpg" alt=""><br>为何说流动性如果成为重要因素，那么很多经济学理论都要改写呢？</p>
-<blockquote>
-<p>回顾<br>已有的与货币相关的经济学说</p>
-</blockquote>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/07/14/%E7%A9%BF%E8%B6%8A%E9%95%80%E9%87%91%E6%97%B6%E4%BB%A3-%E9%82%B5%E5%AE%87%EF%BC%88%E9%98%85%E8%AF%BB%EF%BC%89/" data-id="cke5l2ppb000z4gzhaflngnfm" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Pandas-Pivot Table" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/07/14/Pandas-Pivot%20Table/" class="article-date">
-  <time datetime="2020-07-14T01:14:05.406Z" itemprop="datePublished">2020-07-14</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/14/Pandas-Pivot%20Table/">Pandas-Pivot Table</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Pandas"><a href="#Pandas" class="headerlink" title="Pandas"></a>Pandas</h1><blockquote>
-<p>Groupby 和 Pivot_table</p>
-</blockquote>
-<p>类似excle中的数据透视表。<br>goupby是一种聚合方法，而pivot_table则是数据透视表<img src="/images/15948269340528.jpg" alt="-w812"><br>能用groupby的一定可以用pivot_table方法。</p>
-<p>pivot_table(self, values=None, index=None, columns=None, aggfunc=’mean’, fill_value=None, margins=False, dropna=True, margins_name=’All’, observed=False)</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/07/14/Pandas-Pivot%20Table/" data-id="cke5l2pos00084gzh9qtzaiiv" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Next &amp;raquo;</a>
+    <a class="extend prev" rel="prev" href="/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/">Next &amp;raquo;</a>
   </nav>
 
 </section>
@@ -642,7 +735,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80/">计算机语言</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%BA%A7%E5%93%81/">产品</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%BA%A7%E5%93%81/%E8%AE%BE%E8%AE%A1/">设计</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80/">计算机语言</a></li></ul>
     </div>
   </div>
 
@@ -652,7 +745,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Pandas/" rel="tag">Pandas</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Pandas/" rel="tag">Pandas</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E3%80%8A%E4%BA%BA%E4%BA%BA%E9%83%BD%E6%98%AF%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%862-0%E3%80%8B/" rel="tag">《人人都是产品经理2.0》</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E3%80%8A%E7%AE%80%E7%BA%A6%E8%87%B3%E4%B8%8A-%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%AE%BE%E8%AE%A1%E5%9B%9B%E7%AD%96%E7%95%A5%E3%80%8BV2/" rel="tag">《简约至上_交互式设计四策略》V2</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%B0%E5%BF%86/" rel="tag">记忆</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%BB%E5%90%8E%E6%84%9F/" rel="tag">读后感</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%98%85%E8%AF%BB/" rel="tag">阅读</a></li></ul>
     </div>
   </div>
 
@@ -662,7 +755,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Pandas/" style="font-size: 10px;">Pandas</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a>
+      <a href="/tags/Pandas/" style="font-size: 20px;">Pandas</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/%E3%80%8A%E4%BA%BA%E4%BA%BA%E9%83%BD%E6%98%AF%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%862-0%E3%80%8B/" style="font-size: 10px;">《人人都是产品经理2.0》</a> <a href="/tags/%E3%80%8A%E7%AE%80%E7%BA%A6%E8%87%B3%E4%B8%8A-%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%AE%BE%E8%AE%A1%E5%9B%9B%E7%AD%96%E7%95%A5%E3%80%8BV2/" style="font-size: 10px;">《简约至上_交互式设计四策略》V2</a> <a href="/tags/%E8%AE%B0%E5%BF%86/" style="font-size: 10px;">记忆</a> <a href="/tags/%E8%AF%BB%E5%90%8E%E6%84%9F/" style="font-size: 10px;">读后感</a> <a href="/tags/%E9%98%85%E8%AF%BB/" style="font-size: 10px;">阅读</a>
     </div>
   </div>
 
@@ -671,7 +764,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li></ul>
     </div>
   </div>
 
@@ -684,23 +777,23 @@
       <ul>
         
           <li>
-            <a href="/2020/08/22/markdown%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/">markdown显示问题</a>
+            <a href="/2020/11/23/%E4%BA%A7%E5%93%81%E7%BB%8F%E5%8E%86%E7%9A%84%E8%83%BD%E5%8A%9B-%E3%80%8A%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A%E3%80%8B/">产品经历的能力-《产品经理从入门到精通》</a>
           </li>
         
           <li>
-            <a href="/2020/08/22/Numpy%E7%9A%84random%E5%85%A5%E9%97%A8/">Numpy的random入门</a>
+            <a href="/2020/10/16/OS%E5%BA%93/">OS库</a>
           </li>
         
           <li>
-            <a href="/2020/08/21/list%E7%9A%84%E4%BD%BF%E7%94%A8/">list的使用</a>
+            <a href="/2020/09/21/%E4%BB%80%E4%B9%88%E6%98%AF7%C2%B12%E5%8E%9F%E5%88%99%EF%BC%9F/">什么是7±2原则？</a>
           </li>
         
           <li>
-            <a href="/2020/08/12/Pandas%E5%92%8C%E9%81%8D%E5%8E%86/">Pandas和遍历</a>
+            <a href="/2020/09/05/Tableau%E7%9A%84%E4%BD%BF%E7%94%A8/">Tableau的使用</a>
           </li>
         
           <li>
-            <a href="/2020/08/12/SQL%E5%AD%A6%E4%B9%A0/">SQL学习</a>
+            <a href="/2020/08/26/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E4%B8%8E%E4%BC%97%E4%B8%8D%E5%90%8C%E7%9A%84%E6%80%9D%E7%BB%B4%E6%96%B9%E5%BC%8F%E4%B8%8E%E2%80%99%E8%81%8C%E4%B8%9A%E7%97%85%E2%80%98/">产品经理与众不同的思维方式与’职业病‘</a>
           </li>
         
       </ul>
@@ -715,7 +808,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2020 John Doe<br>
+      &copy; 2021 John Doe<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
